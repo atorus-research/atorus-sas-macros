@@ -2,7 +2,7 @@
 * Program/Macro:             xuct.sas
 * Protocol:                  
 * SAS Ver:                   SAS 9.4 V9
-* Author:                    Oleksii Mikriukov
+* Author:                    Atorus Research
 * Date:                      12AUG2022
 * Program Title:             
 *
@@ -36,9 +36,7 @@
 * Revisions:                
 * Revision #	Programmer 	                   Date 	     	   Description of Change(s)
 * ----------    ----------------------         ------------        ---------------------------
-* 1				Oleksii Mikriukov			   18Oct2022		   1) Added &subset parameter
-*																   2) Check data type of &invar in spec
-* 																   3) Check if Codelists tab in spec has &codelist
+*
 ************************************************************************************/
 
 %macro xuct(inds /*Required. Input dataset name.*/,

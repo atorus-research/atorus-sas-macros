@@ -2,7 +2,7 @@
 * Program/Macro:             xdalign.sas
 * Protocol:                  
 * SAS Ver:                   SAS 9.4 V9
-* Author:                    Rostyslav Didenko
+* Author:                    Atorus Research
 * Date:                      05MAY2021
 * Program Title:             
 *
@@ -23,9 +23,7 @@
 * Revisions:                
 * Revision #	Programmer 	                   Date 	     	   Description of Change(s)
 * ----------    ----------------------         ------------        ---------------------------
-* #1			Oleksii Mikryukov			   14JUL2022		   Use a "." as the delimiter that separates 
-*																   words to allign properly negative numbers
-* #2			Oleksii Mikryukov			   03NOV2022		   Added escapechar parameter
+*
 ************************************************************************************/
 
 %macro xdalign(invar /*Required. Input variable name.*/,

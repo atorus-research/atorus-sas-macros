@@ -2,7 +2,7 @@
 * Program/Macro:             xurnm.sas
 * Protocol:                  
 * SAS Ver:                   SAS 9.4 V9
-* Author:                    Oleksii Mikryukov
+* Author:                    Atorus Research
 * Date:                      14JUL2022
 * Program Title:             
 *
@@ -24,9 +24,7 @@
 * Revisions:                
 * Revision #	Programmer 	                   Date 	     	   Description of Change(s)
 * ----------    ----------------------         ------------        ---------------------------
-* 1				Oleksii Mikryukov			   20Dec2022		   Fixed renaming bug, when variable name 
-*																   has spaces or characters other than 
-* 																   (A-Z, a-z, 0-9) or the underscore
+*
 ************************************************************************************/
 
 %macro xurnm(inds /*Required. Name of the input dataset.*/,

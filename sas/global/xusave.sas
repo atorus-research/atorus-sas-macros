@@ -2,7 +2,7 @@
 * Program/Macro:             xusave.sas
 * Protocol:                  
 * SAS Ver:                   SAS 9.4 V9
-* Author:                    Oleksandr Homel
+* Author:                    Atorus Research
 * Date:                      13JUL2022
 * Program Title:             
 *

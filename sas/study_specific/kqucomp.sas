@@ -2,7 +2,7 @@
 * Program/Macro:             kqucomp.sas
 * Protocol:                  
 * SAS Ver:                   SAS 9.4 V9
-* Author:                    Alex Khylko
+* Author:                    Atorus Research
 * Date:                      20Aug2021
 * Program Title:             
 *
@@ -26,10 +26,7 @@
 * Revision #	Programmer 	                   Date 	     	   Description of Change(s)
 *
 * ----------    ----------------------         ------------        ---------------------------
-* #1			Oleksii Mikriukov			   6AUG2022			   Removed sorting before compare to catch incorrect order
-*																   Added qc_lib parameter
-*																   Compare supp/comm datasets if at least one side (prod or qc) has records in dataset
-*																   Check required parameters emptiness
+*
 ************************************************************************************/
 
 %macro kqucomp(base=&domain. /*Default: &domain. Name of the dataset which is used as base in compare procedure.*/,

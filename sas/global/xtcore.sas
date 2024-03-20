@@ -2,7 +2,7 @@
 * Program/Macro:             xtcore.sas
 * Protocol:                  
 * SAS Ver:                   SAS 9.4 V9
-* Author:                    Oleksii Mikryukov
+* Author:                    Atorus Research
 * Date:                      14JUL2022
 * Program Title:             
 *

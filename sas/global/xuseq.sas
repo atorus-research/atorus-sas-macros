@@ -2,7 +2,7 @@
 * Program/Macro:             xuseq.sas
 * Protocol:                  
 * SAS Ver:                   SAS 9.4 V9
-* Author:                    Oleksandr Homel
+* Author:                    Atorus Research
 * Date:                      14JUL2022
 * Program Title:             
 *
