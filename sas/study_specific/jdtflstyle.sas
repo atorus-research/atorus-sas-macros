@@ -2,7 +2,7 @@
 * Program/Macro:             jdtflstyle.sas
 * Protocol:                  
 * SAS Ver:                   SAS 9.4 V9
-* Author:                    Rostyslav Didenko
+* Author:                    Atorus Research
 * Date:                      05MAY2021
 * Program Title:             
 *
@@ -31,11 +31,7 @@
 * Revisions:                
 * Revision #	Programmer 	                   Date 	     	   Description of Change(s)
 * ----------    ----------------------         ------------        ---------------------------
-* #1			A.Homel						   17FEB2022		   NOGTITLE and NOGFOOTNOTE options added to prevent titles and
-*																   footnotes from appearing in graphical output.
-* #2			A.Homel						   12AUG2022		   Macro renamed jstflstyle -> jdtflstyle. Cosmetics updated.
-*																   filename, filepath, lmarg, rmarg, tmarg, bmarg, escapechar parameters
-*																   added. Parameter emptiness check added.
+*
 ************************************************************************************/
 
 %macro jdtflstyle(filename /*Required. Name of the output file.*/,

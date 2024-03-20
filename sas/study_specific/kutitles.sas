@@ -2,7 +2,7 @@
 * Program/Macro:             kutitles.sas
 * Protocol:                  
 * SAS Ver:                   SAS 9.4 V9
-* Author:                    Yevhenii Boiko
+* Author:                    Atorus Research
 * Date:                      17SEP2022
 * Program Title:             
 *
@@ -25,10 +25,7 @@
 * Revisions:                
 * Revision #	Programmer 	                   Date 	     	   Description of Change(s)
 * ----------    ----------------------         ------------        ---------------------------
-* #1			Y.Boiko						   04OCT2021		   Updated header, added anotations for macro parameters.
-* #2			A.Homel						   09AUG2022		   Cosmetics updated. Now macro resolve sponsor specific titles
-*																   from TFL_titles.csv. Filepath parameter added. Parameters emptiness
-*																   check added.
+*
 ************************************************************************************/
 
 %macro kutitles(progname /*Required. Name of the SAS program, which is used for search in TFL_titles.csv.*/,

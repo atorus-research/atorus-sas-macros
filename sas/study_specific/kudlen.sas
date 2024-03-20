@@ -2,7 +2,7 @@
 * Program/Macro:             kudlen.sas
 * Protocol:                  
 * SAS Ver:                   SAS 9.4 V9
-* Author:                    Alex Khylko
+* Author:                    Atorus Research
 * Date:                      20AUG2021
 * Program Title:             
 *
@@ -21,8 +21,7 @@
 * Revisions:                
 * Revision #	Programmer 	                   Date 	     	   Description of Change(s)
 * ----------    ----------------------         ------------        ---------------------------
-* 1				Oleksii Mikryukov			   21JUL2022		   Fixed behaviour for empty dataset
-* 																   Fixed behaviour when dataset has variables with "_" prefix
+*
 ************************************************************************************/
 
 %macro kudlen(inds /*Required. Name of the input dataset.*/,

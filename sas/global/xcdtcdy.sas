@@ -2,7 +2,7 @@
 * Program/Macro:             xcdtcdy.sas
 * Protocol:
 * SAS Ver:                   SAS 9.4 V9
-* Author:					 Rostyslav Didenko
+* Author:					 Atorus Research
 * Date:						 19FEB2021
 * Program Title:             
 *
@@ -21,8 +21,7 @@
 * Revisions:
 * Revision #    Programmer                     Date                Description of Change(s)
 * ----------    ----------------------         ------------        ---------------------------
-* #1			A. Homel					   26JUL2022		   Parameters updated. Parameter emptiness check added.
-*																   Cosmetics updated.
+*
 ************************************************************************************/
 
 %macro xcdtcdy(dtcdate /*Required. Name of character --DTC variable to calculate --DY for.*/,

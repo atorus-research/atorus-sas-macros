@@ -2,7 +2,7 @@
 * Program/Macro:             kqtlfcomp.sas
 * Protocol:                  
 * SAS Ver:                   SAS 9.4 V9
-* Author:                    Alex Mikryukov
+* Author:                    Atorus Research
 * Date:                      09SEP2021
 * Program Title:             
 *

@@ -2,7 +2,7 @@
 * Program/Macro:             xumprint.sas
 * Protocol:                  
 * SAS Ver:                   SAS 9.4 V9
-* Author:                    Rostyslav Didenko
+* Author:                    Atorus Research
 * Date:                      19FEB2021
 * Program Title:             
 *
@@ -23,9 +23,7 @@
 * Revisions:                
 * Revision #	Programmer 	                   Date 	     	   Description of Change(s)
 * ----------    ----------------------         ------------        ---------------------------
-* #1			A.Homel						   17FEB2022		   4 NOTES of interest were added to convert to warning.
-* #2			A.Homel						   09AUG2022		   Cosmetics updated. Parameter emtptiness check added.
-*																   Macro cleaning added.
+*
 ************************************************************************************/
 
 %macro xumprint(route=NO /*Default: NO. If NO then uploads log file back to SAS EG. Specify YES to save output lst and log files.*/);

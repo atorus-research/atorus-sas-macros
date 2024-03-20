@@ -2,7 +2,7 @@
 * Program/Macro:             xuprogpath.sas
 * Protocol:                  
 * SAS Ver:                   SAS 9.4 V9
-* Author:                    Rostyslav Didenko
+* Author:                    Atorus Research
 * Date:                      19FEB2021
 * Program Title:             
 *
@@ -21,7 +21,7 @@
 * Revisions:                
 * Revision #	Programmer 	                   Date 	     	   Description of Change(s)
 * ----------    ----------------------         ------------        ---------------------------
-* #1			A.Homel						   09AUG2022		   Cosmetics updated. Batch run condition removed.
+*
 ************************************************************************************/
 
 %macro xuprogpath;

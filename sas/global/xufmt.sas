@@ -2,7 +2,7 @@
 * Program/Macro:             xufmt.sas
 * Protocol:                  
 * SAS Ver:                   SAS 9.4 V9
-* Author:                    Oleksii Mikryukov
+* Author:                    Atorus Research
 * Date:                      13JUL2022
 * Program Title:             
 *

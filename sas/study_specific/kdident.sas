@@ -2,7 +2,7 @@
 * Program/Macro:             kdident.sas
 * Protocol:                  
 * SAS Ver:                   SAS 9.4 V9
-* Author:                    Yevhenii Boiko, Marat Zakirov
+* Author:                    Atorus Research
 * Date:                      21OCT2021
 * Program Title:             
 *
@@ -25,9 +25,7 @@
 * Revisions:                
 * Revision #	Programmer 	                   Date 	     	   Description of Change(s)
 * ----------    ----------------------         ------------        ---------------------------
-* #1			A.Homel						   05SEP2022		   Macro renamed kuident -> kdident.
-*																   Parameter names updated. Parameter emptiness check added.
-*																   Cosmetics updated. Length of output variable increased.
+*
 ************************************************************************************/
 
 %macro kdident(invar /*Required. Name of the input variable.*/,

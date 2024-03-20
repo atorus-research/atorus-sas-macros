@@ -2,7 +2,7 @@
 * Program/Macro:             xuloadcsv.sas
 * Protocol:                  
 * SAS Ver:                   SAS 9.4 V9
-* Author:                    Oleksii Mikryukov
+* Author:                    Atorus Research
 * Date:                      18JUL2022
 * Program Title:             
 *
