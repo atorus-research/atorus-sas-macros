@@ -42,3 +42,4 @@ they'll be used by one side only (production or validation).
 | QC, General CDISC | kqucomp    | SDTM and ADaM datasets compare   macro.                                                                                                                             |
 | General CDISC     | kudlen     | Set the variable length to the   maximum length met for this variable within the dataset.                                                                           |
 | Displays          | kutitles   | Macro which assigns titles   according to the external TFL_titles.csv file.                                                                                         |
+| Displays          | koutrtf   | Macro which generates Table/Listing RTF out of the final dataset.                                                                                         |
