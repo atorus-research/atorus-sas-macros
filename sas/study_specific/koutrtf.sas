@@ -238,8 +238,9 @@
 
     *** Get list of variables/number of variables ***;
     proc sql noprint;
-        select distinct(name) into: ___varlist separated by " " 
-        from ___tmp_cont_trwrd;
+        select name into: ___varlist separated by " "
+        from ___tmp_cont_trwrd
+        order by varnum;
 
         select count (distinct varnum) into: ___varnum
         from ___tmp_cont_trwrd;
@@ -407,7 +408,8 @@
 
     *** Evaluate length of last technical footnote to populate proper space between pgm path and page number. ***;
     %let lngoverfoot = %sysevalf(&ls8pt. - %sysfunc(length(&sysuserid)) - %sysfunc(length(&FilePath.&ProgName. &timestamp.)) - 12 - (&MaxPageDigits. * 2) );
-    
+
+    %let leftgr_def = &leftgr.; /*Update V1.03 - Pt1*/
     %if &byvar. ^= %then %do; %let leftgr=%sysevalf(&leftgr. + 1); %end;
 
     ODS LISTING CLOSE;
@@ -431,7 +433,7 @@
                    %if %length(&spanhead.) ^= 0 %then %do; 
                        %let ___fullvarlist = %sysfunc(tranwrd(%sysfunc(tranwrd(&spanhead.,_#_,&escapechar.{newline})),_$_,&escapechar.S={borderbottomwidth=1}));  
                    %end;
-                   %if &leftgr. ^= 0 %then %do u=1 %to &leftgr.;
+                   %if &leftgr. ^= 0 %then %do u=1 %to &leftgr_def.;
                         %let ___fullvarlist = %sysfunc(tranwrd(&___fullvarlist., v&u., bycnt&u. v&u.));
                    %end;
                    &___fullvarlist.
@@ -445,7 +447,7 @@
                 %if &byvar. ^= %then %do; %let j=%sysevalf(&i. - 1); %end;
                 %if &byvar.  = %then %do; %let j=          &i.     ; %end;
 
-                %if &leftgr. ^= 0 and &i. <= &leftgr. %then %do;
+                %if &leftgr. ^= 0 and &i. <= &leftgr_def. %then %do;
                     define bycnt&i./ order noprint;
                 %end;
 
@@ -472,8 +474,11 @@
             %do i = 1 %to 6;
                 %let j=%sysevalf(&i. + 4);
                 %if "&&t&i." ^= "" %then %do; title&j &&tt&i.; %end;
+            %end;
+            /*Update V1.02*/
+            %do i = 1 %to 8;
                 %if "&&f&i." ^= "" %then %do; footnote&i j=left &&ft&i.; %end;
-            %end;                  
+            %end;
             footnote&lastFootPos. "&sysuserid &FilePath.&ProgName. &sysdate9:&systime.%sysfunc(repeat(&watermk.,&lngoverfoot.))Page &escapechar.{thispage} of &escapechar.{lastpage}";
 
             break after pg/page;
