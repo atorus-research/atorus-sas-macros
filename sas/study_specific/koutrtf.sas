@@ -7,7 +7,8 @@
 * Program Title:             
 *
 * Description:               Macro which generates Table/Listing RTF out of final dataset.
-* Remarks:
+* Remarks:                   See Assumptions sections for required macro variables.
+* See Also:                  %kplotrtf.sas
 * Input:                     Final Table/Listing dataset
 * Output:                    &oid.rtf
 *
