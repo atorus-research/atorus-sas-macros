@@ -76,9 +76,10 @@ run;
 - Positive study days include the reference date
 - Does not handle partial dates
 
-## Related Macros
-- xcdtc2dt.sas - For converting ISO dates to SAS dates/times
-- Other date handling macros in the global library
+## See Also
+- [`%xcdtc2dt`](/man/global/xcdtc2dt.md): For converting ISO dates to SAS dates/times
+- [`%xudt2dtc`](/man/global/xudt2dtc.md): Convert SAS dates to ISO 8601 format
+- [`%xuvisit`](/man/global/xuvisit.md): Visit and timing derivations
 
 ## Change Log
 | Version | Date | Author | Changes |

@@ -74,9 +74,10 @@ The macro creates the following variables (where 'prefix' is the specified prefi
 - Time component must be complete if present (partial times are treated as date-only)
 - Relative day calculation accounts for same-day events (adds 1 for dates >= reference)
 
-## Related Macros
-- xcdtcdy.sas - For relative day calculations
-- Other date/time handling macros in the global library
+## See Also
+- [`%xcdtcdy`](/man/global/xcdtcdy.md): For relative day calculations
+- [`%xudt2dtc`](/man/global/xudt2dtc.md): Convert SAS dates to ISO 8601 format
+- [`%xuvisit`](/man/global/xuvisit.md): Visit and timing derivations
 
 ## Change Log
 | Version | Date | Author | Changes |

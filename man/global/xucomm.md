@@ -91,11 +91,11 @@ Output dataset contains standard CO domain variables:
 - Warns if more COVALx variables are needed than specified in metadata
 - QC mode creates separate output dataset with 'qc' prefix
 
-## Related Macros
-- xtmeta.sas - For metadata handling
-- xtorder.sas - For sorting specifications
-- xusplit.sas - For text splitting
-- Other SDTM utility macros
+## See Also
+- [`%xtmeta`](/man/global/xtmeta.md): For metadata handling
+- [`%xtorder`](/man/global/xtorder.md): For sorting specifications
+- [`%xusplit`](/man/global/xusplit.md): For text splitting
+- [`%xumrgcs`](/man/global/xumrgcs.md): For merging comments with parent domains
 
 ## Change Log
 | Version | Date | Author | Changes |

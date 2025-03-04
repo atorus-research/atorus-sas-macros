@@ -81,10 +81,10 @@ Generates CONTENTS procedure output for each dataset:
 - Output format follows PROC CONTENTS standards
 - Error messages identify specific dataset issues
 
-## Related Macros
-- Dataset inspection utilities
-- Metadata management tools
-- Quality control macros
+## See Also
+- [`%xuload`](/man/global/xuload.md): Dataset loading utility
+- [`%xusave`](/man/global/xusave.md): Dataset saving utility
+- [`%xuct`](/man/global/xuct.md): Controlled terminology validation
 
 ## Change Log
 | Version | Date | Author | Changes |

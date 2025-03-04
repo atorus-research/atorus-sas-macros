@@ -115,9 +115,9 @@ The `%kqucomp` macro performs dataset comparisons between production and QC vers
    - Separate comparisons for each component
    - Standard PROC COMPARE output
 
-## Related Macros
-- `%kqtlfcomp`: TLF dataset comparison
-- `%xusupp`: Supplemental qualifier creation
+## See Also
+- [`%kqtlfcomp`](/man/study_specific/kqtlfcomp.md): TLF dataset comparison
+- [`%xusupp`](/man/global/xusupp.md): Supplemental qualifier creation
 - Other validation macros
 
 ## Change Log

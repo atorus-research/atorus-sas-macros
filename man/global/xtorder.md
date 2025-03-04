@@ -98,10 +98,10 @@ The `%xtorder` macro creates a global macro variable containing the sort order f
    - Validity of variable names
    - Duplicate variables in sort order
 
-## Related Macros
-- `%xtmeta`: Creates dataset structure from metadata
-- `%xtcore`: Uses metadata for core variable processing
-- `%xdalign`: Aligns datasets with metadata specifications
+## See Also
+- [`%xtmeta`](/man/global/xtmeta.md): Creates dataset structure from metadata
+- [`%xtcore`](/man/global/xtcore.md): Uses metadata for core variable processing
+- [`%xdalign`](/man/global/xdalign.md): Aligns datasets with metadata specifications
 
 ## Change Log
 ### Version 1.0 (20JUL2022)

@@ -85,10 +85,10 @@ The `%xumrgcs` macro merges Supplemental Qualifiers (SUPP--) and Comments (CO) d
 4. For CO merging, a single CO dataset contains comments for all domains.
 5. Output dataset names reflect the types of data merged.
 
-## Related Macros
-- `%xusupp`: Creates supplemental qualifier datasets
-- `%xuload`: Loads SDTM datasets
-- `%xusplit`: Splits datasets by specified criteria
+## See Also
+- [`%xusupp`](/man/global/xusupp.md): Creates supplemental qualifier datasets
+- [`%xuload`](/man/global/xuload.md): Loads SDTM datasets
+- [`%xusplit`](/man/global/xusplit.md): Splits datasets by specified criteria
 
 ## Change Log
 ### Version 1.0 (22AUG2022)

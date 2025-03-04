@@ -123,9 +123,10 @@ The `%kqtlfcomp` macro performs comprehensive comparisons between production and
    - Temporary dataset creation
    - Debug mode impact
 
-## Related Macros
-- `%kqucomp`: General dataset comparison
-- Other QC and validation macros
+## See Also
+- [`%kqucomp`](/man/study_specific/kqucomp.md): General dataset comparison
+- [`%xuct`](/man/global/xuct.md): Controlled terminology validation
+- [`%xumrgcs`](/man/global/xumrgcs.md): Dataset merging utility
 
 ## Change Log
 ### Version 1.0 (09SEP2021)

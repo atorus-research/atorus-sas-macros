@@ -87,10 +87,10 @@ Creates the following SAS formats for each codelist:
 - Only creates formats for unique mappings
 - Format names are automatically generated from codelist ID
 
-## Related Macros
-- xuct.sas - For controlled terminology validation
-- Other format and codelist handling macros
-- Data standardization macros
+## See Also
+- [`%xuct`](/man/global/xuct.md): For controlled terminology validation
+- [`%xuload`](/man/global/xuload.md): Dataset loading with format handling
+- [`%xuloadcsv`](/man/global/xuloadcsv.md): CSV file loading utility
 
 ## Change Log
 | Version | Date | Author | Changes |

@@ -86,8 +86,8 @@ The `%xumprint` macro manages SAS log and listing file handling, providing funct
   - Loading failures
   - Data type conversions
 
-## Related Macros
-- xuprogpath.sas - Program path management
+## See Also
+- [`%xuprogpath`](/man/global/xuprogpath.md) - Program path management
 - setup.sas - Environment configuration
 - Other logging and output management macros
 

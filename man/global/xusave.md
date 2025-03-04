@@ -96,10 +96,10 @@ Creates the following files:
 - Output library must be pre-assigned
 - Transport files created in same directory as SAS datasets
 
-## Related Macros
-- Dataset management macros
-- SDTM/ADaM utilities
-- Export and archival tools
+## See Also
+- [`%xuload`](/man/global/xuload.md): Dataset loading utility
+- [`%xuloadcsv`](/man/global/xuloadcsv.md): CSV file loading utility
+- [`%xusplit`](/man/global/xusplit.md): Dataset splitting utility
 
 ## Change Log
 | Version | Date | Author | Changes |

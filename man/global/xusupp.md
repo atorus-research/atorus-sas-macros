@@ -109,10 +109,10 @@ Creates or updates SUPP[domain] dataset containing:
 - Variable labels used for QLABEL if not specified
 - Debug mode retains intermediate datasets
 
-## Related Macros
-- SDTM domain creation macros
-- Data standardization utilities
-- Variable management tools
+## See Also
+- [`%xumrgcs`](/man/global/xumrgcs.md): Merge SUPP and CO datasets
+- [`%xusplit`](/man/global/xusplit.md): Text variable splitting utility
+- [`%xuload`](/man/global/xuload.md): Dataset loading utility
 
 ## Change Log
 | Version | Date | Author | Changes |

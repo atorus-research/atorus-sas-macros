@@ -91,10 +91,10 @@ The `%xtcore` macro adds ADSL core variables to an analysis dataset based on met
 3. Only records with matching USUBJID in both datasets are retained
 4. STUDYID and USUBJID are always preserved from parent dataset
 
-## Related Macros
-- `%xtmeta`: Processes metadata specifications
-- `%xtorder`: Orders variables according to metadata
-- `%xdalign`: Aligns datasets with metadata specifications
+## See Also
+- [`%xtmeta`](/man/global/xtmeta.md): Processes metadata specifications
+- [`%xtorder`](/man/global/xtorder.md): Orders variables according to metadata
+- [`%xdalign`](/man/global/xdalign.md): Aligns datasets with metadata specifications
 
 ## Change Log
 ### Version 1.0 (14JUL2022)

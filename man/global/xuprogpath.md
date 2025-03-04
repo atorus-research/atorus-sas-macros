@@ -111,9 +111,9 @@ Lst path: C:/Projects/Client/Compound/Protocol/Task/final/sdtm/lst/
 3. Assumes standard folder types (development/final) and program types (sdtm/adam/tlf).
 4. Should be called automatically by `%xumprint` or setup.sas.
 
-## Related Macros
-- `%xumprint`: Calls `%xuprogpath` for program information
-- `%xucomm`: Uses path information for documentation
+## See Also
+- [`%xumprint`](/man/global/xumprint.md): Calls `%xuprogpath` for program information
+- [`%xucomm`](/man/global/xucomm.md): Uses path information for documentation
 - Other setup and initialization macros
 
 ## Change Log

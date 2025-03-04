@@ -93,10 +93,10 @@ Creates a consolidated dataset containing:
 - Header handling requires consistent structure
 - Maximum filename length for extracted values is 200
 
-## Related Macros
-- xuload.sas - For loading SAS datasets
-- Other data import utilities
-- File handling macros
+## See Also
+- [`%xuload`](/man/global/xuload.md): For loading SAS datasets
+- [`%xufmt`](/man/global/xufmt.md): Format creation and management
+- [`%xusave`](/man/global/xusave.md): Dataset saving utility
 
 ## Change Log
 | Version | Date | Author | Changes |

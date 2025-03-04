@@ -77,10 +77,10 @@ The `%xuepoch` macro derives the EPOCH variable for SDTM datasets using the Stud
 3. When comparing dates of different completeness, the comparison uses the length of the less complete date.
 4. The macro preserves all input dataset variables in the output.
 
-## Related Macros
-- `%xuload`: Used to load SDTM datasets
-- `%xuvisit`: Derives VISIT/VISITNUM variables
-- `%xcdtc2dt`: Converts ISO 8601 dates to SAS dates
+## See Also
+- [`%xuload`](/man/global/xuload.md): Used to load SDTM datasets
+- [`%xuvisit`](/man/global/xuvisit.md): Derives VISIT/VISITNUM variables
+- [`%xcdtc2dt`](/man/global/xcdtc2dt.md): Converts ISO 8601 dates to SAS dates
 
 ## Change Log
 ### Version 1.0 (20JUL2022)

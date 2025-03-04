@@ -90,10 +90,10 @@ The `%xuct` macro validates variable values against controlled terminology defin
 3. Non-printable characters in codelist values are detected and reported but not automatically corrected.
 4. The macro processes one variable/codelist combination at a time.
 
-## Related Macros
-- `%xufmt`: Creates SAS formats from codelists
-- `%xuloadcsv`: Imports and processes CSV files
-- `%xuload`: Loads datasets with format handling
+## See Also
+- [`%xufmt`](/man/global/xufmt.md): Creates SAS formats from codelists
+- [`%xuloadcsv`](/man/global/xuloadcsv.md): Imports and processes CSV files
+- [`%xuload`](/man/global/xuload.md): Loads datasets with format handling
 
 ## Change Log
 ### Version 1.0 (12AUG2022)

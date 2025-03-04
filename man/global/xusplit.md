@@ -94,10 +94,10 @@ Creates a dataset containing:
 - All split variables have same length
 - Missing values handled appropriately
 
-## Related Macros
-- Text processing macros
-- Variable management utilities
-- Clinical data standardization tools
+## See Also
+- [`%xusupp`](/man/global/xusupp.md): Supplemental qualifier creation
+- [`%xumrgcs`](/man/global/xumrgcs.md): Dataset merging utility
+- [`%xusave`](/man/global/xusave.md): Dataset saving utility
 
 ## Change Log
 | Version | Date | Author | Changes |

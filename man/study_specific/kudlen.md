@@ -105,9 +105,9 @@ The `%kudlen` macro optimizes variable lengths in a dataset by adjusting charact
    - Multiple metadata operations
    - Sequential processing
 
-## Related Macros
-- `%xurnm`: Variable renaming
-- `%xuload`: Dataset loading
+## See Also
+- [`%xurnm`](/man/global/xurnm.md): Variable renaming
+- [`%xuload`](/man/global/xuload.md): Dataset loading
 - Other data management macros
 
 ## Change Log

@@ -110,8 +110,8 @@ The `%jdtflstyle` macro creates a style template for study PDF/RTF outputs. It o
    - Uses standard directory separators
    - Assumes specific naming conventions
 
-## Related Macros
-- `%kutitles`: Title and footnote management
+## See Also
+- [`%kutitles`](/man/study_specific/kutitles.md): Title and footnote management
 - Other TFL formatting macros
 
 ## Change Log

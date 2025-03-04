@@ -85,10 +85,10 @@ Creates in WORK library:
 - Temporary format search path modification in 'keep' mode
 - Debug mode retains intermediate processing datasets
 
-## Related Macros
-- xufmt.sas - For format creation
-- Other dataset management macros
-- Data standardization utilities
+## See Also
+- [`%xufmt`](/man/global/xufmt.md): For format creation
+- [`%xuloadcsv`](/man/global/xuloadcsv.md): CSV file loading utility
+- [`%xusave`](/man/global/xusave.md): Dataset saving utility
 
 ## Change Log
 | Version | Date | Author | Changes |

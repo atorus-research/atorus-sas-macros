@@ -83,8 +83,8 @@ run;
 - Length parameter must include space for both integer and decimal parts
 - Warning will be issued for numbers with more than 5 digits before decimal point
 
-## Related Macros
-- xufmt.sas - For general formatting utilities
+## See Also
+- [`%xufmt`](/man/global/xufmt.md) - For general formatting utilities
 - Other formatting and reporting macros in the global library
 
 ## Change Log

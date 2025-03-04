@@ -93,10 +93,10 @@ Creates a dataset containing:
 - Handles both scheduled and unscheduled visits
 - Maintains SDTM compliance
 
-## Related Macros
-- SDTM timing variables macros
-- Visit and date handling utilities
-- Data standardization tools
+## See Also
+- [`%xuseq`](/man/global/xuseq.md): Sequence number generation
+- [`%xuload`](/man/global/xuload.md): Dataset loading utility
+- [`%xusave`](/man/global/xusave.md): Dataset saving utility
 
 ## Change Log
 | Version | Date | Author | Changes |

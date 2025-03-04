@@ -96,10 +96,10 @@ The `%kdident` macro is designed to beautifully split character variables for ou
    - Processes text word by word
    - Memory usage proportional to text length
 
-## Related Macros
-- `%jdtflstyle`: Table styling and formatting
-- `%kutitles`: Title and footnote management
-- Other text formatting macros
+## See Also
+- [`%jdtflstyle`](/man/study_specific/jdtflstyle.md): Table styling and formatting
+- [`%kutitles`](/man/study_specific/kutitles.md): Title and footnote management
+- [`%kplotrtf`](/man/study_specific/kplotrtf.md): RTF output formatting
 
 ## Change Log
 ### Version 1.0 (21OCT2021)

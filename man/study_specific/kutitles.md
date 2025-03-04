@@ -116,9 +116,9 @@ The `%kutitles` macro assigns titles to SAS outputs based on specifications from
    - Preserves title order
    - Manages special characters
 
-## Related Macros
-- `%jdtflstyle`: Output styling
-- `%kplotrtf`: RTF plot generation
+## See Also
+- [`%jdtflstyle`](/man/study_specific/jdtflstyle.md): Output styling
+- [`%kplotrtf`](/man/study_specific/kplotrtf.md): RTF plot generation
 - Other TFL formatting macros
 
 ## Change Log

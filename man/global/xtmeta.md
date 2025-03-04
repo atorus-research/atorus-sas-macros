@@ -104,10 +104,10 @@ The `%xtmeta` macro creates a zero-record dataset based on metadata specificatio
 
 4. Format assignments only processed for ADaM datasets
 
-## Related Macros
-- `%xtcore`: Uses metadata for core variable processing
-- `%xtorder`: Orders variables according to metadata
-- `%xdalign`: Aligns datasets with metadata specifications
+## See Also
+- [`%xtcore`](/man/global/xtcore.md): Uses metadata for core variable processing
+- [`%xtorder`](/man/global/xtorder.md): Orders variables according to metadata
+- [`%xdalign`](/man/global/xdalign.md): Aligns datasets with metadata specifications
 
 ## Change Log
 ### Version 1.0 (20JUL2022)

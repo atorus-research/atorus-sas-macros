@@ -89,10 +89,10 @@ Modifies input dataset to include:
 - Sort variables determine sequence grouping
 - Assumes USUBJID is present in dataset
 
-## Related Macros
-- SDTM/ADaM sequence generation macros
-- Dataset sorting utilities
-- Variable creation tools
+## See Also
+- [`%xuvisit`](/man/global/xuvisit.md): Visit sequence number generation
+- [`%xuload`](/man/global/xuload.md): Dataset loading utility
+- [`%xusave`](/man/global/xusave.md): Dataset saving utility
 
 ## Change Log
 | Version | Date | Author | Changes |

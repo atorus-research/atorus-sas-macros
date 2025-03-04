@@ -91,10 +91,10 @@ Creates a dataset containing:
 - Cannot selectively rename variables (applies to all)
 - Original dataset structure is preserved
 
-## Related Macros
-- Variable management macros
-- Dataset manipulation utilities
-- Naming convention enforcement tools
+## See Also
+- [`%xuload`](/man/global/xuload.md): Dataset loading utility
+- [`%xusave`](/man/global/xusave.md): Dataset saving utility
+- [`%xucont`](/man/global/xucont.md): Dataset contents utility
 
 ## Change Log
 | Version | Date | Author | Changes |
