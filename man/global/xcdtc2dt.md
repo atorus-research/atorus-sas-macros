@@ -76,7 +76,7 @@ The macro creates the following variables (where 'prefix' is the specified prefi
 
 ## See Also
 - [`%xcdtcdy`](/man/global/xcdtcdy.md): For relative day calculations
-- [`%xudt2dtc`](/man/global/xudt2dtc.md): Convert SAS dates to ISO 8601 format
+- [`%xuepoch`](/man/global/xuepoch.md): Derives the EPOCH variable for SDTM datasets
 - [`%xuvisit`](/man/global/xuvisit.md): Visit and timing derivations
 
 ## Change Log

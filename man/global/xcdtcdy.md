@@ -1,7 +1,7 @@
 # %xcdtcdy - Calculate Study Day from ISO 8601 Dates
 
 ## Overview
-The `%xcdtcdy` macro calculates the study day (--DY) variable from two SDTM character date variables in ISO 8601 format (--DTC). This is commonly used in clinical trials to calculate the number of days between a reference date (usually study start) and another event date.
+The `%xcdtcdy` macro calculates the study day (--DY) variable from two SDTM character date variables in ISO 8601 format (--DTC). This is commonly used in clinical trials to calculate the number of days between a reference date (usually first study drug exposure) and another event date.
 
 ## Version Information
 - **Version**: 1.0
@@ -78,7 +78,7 @@ run;
 
 ## See Also
 - [`%xcdtc2dt`](/man/global/xcdtc2dt.md): For converting ISO dates to SAS dates/times
-- [`%xudt2dtc`](/man/global/xudt2dtc.md): Convert SAS dates to ISO 8601 format
+- [`%xuepoch`](/man/global/xuepoch.md): Derives the EPOCH variable for SDTM datasets
 - [`%xuvisit`](/man/global/xuvisit.md): Visit and timing derivations
 
 ## Change Log
