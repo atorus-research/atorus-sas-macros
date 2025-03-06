@@ -6,6 +6,10 @@ The repo consists of two sections: SAS Global and SAS Study-specific standard co
 </br>**Study-specific** - are intended to be copied to and live within a particular study (or protocol) area. It is expected they may need some modifications from study to study, and thus it is anticipated
 they'll be used by one side only (production or validation).
 
+## Documentation
+- [Global Macros Documentation](/man/global/)
+- [Study-specific Macros Documentation](/man/study_specific/)
+
 ## 1. List of the SAS Codes with Short Descriptions
 ### 1.1. Global standard code
 | Type          | Name       | Description                                                                                                                                                                                                                                       |
