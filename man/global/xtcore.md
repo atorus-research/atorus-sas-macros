@@ -94,7 +94,7 @@ The `%xtcore` macro adds ADSL core variables to an analysis dataset based on met
 ## See Also
 - [`%xtmeta`](/man/global/xtmeta.md): Processes metadata specifications
 - [`%xtorder`](/man/global/xtorder.md): Orders variables according to metadata
-- [`%xdalign`](/man/global/xdalign.md): Aligns datasets with metadata specifications
+- [`%kutitles`](/man/study_specific/kutitles.md): Title and footnote management
 
 ## Change Log
 ### Version 1.0 (14JUL2022)

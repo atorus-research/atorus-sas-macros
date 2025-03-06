@@ -6,7 +6,7 @@ The `%setup` macro initializes the study environment by setting up global variab
 ## Version Information
 - **Version**: 1.0
 - **Last Updated**: 18FEB2021
-- **Author(s)**: Rostyslav Didenko
+- **Author(s)**: Atorus Research
 
 ## Dependencies
 - SAS Version: SAS 9.4 V9
@@ -66,13 +66,14 @@ Production/Validation Libraries (when `__side` is defined):
 ### Automatic Usage
 ```sas
 /* The macro is called automatically by %xumprint */
-%xumprint(program=myprogram.sas);
+%xumprint(route=YES);
 ```
 
 ### Manual Usage (if needed)
 ```sas
 /* First call xuprogpath to set required globals */
 %xuprogpath;
+
 /* Then run setup */
 %setup;
 ```

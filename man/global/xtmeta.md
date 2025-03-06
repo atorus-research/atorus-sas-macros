@@ -79,8 +79,33 @@ The `%xtmeta` macro creates a zero-record dataset based on metadata specificatio
    - Solution: Verify dataset name and metadata content
 
 3. **Missing Variable Lengths**
-   - Warning: "Length is not filled for [variables]"
+   - Note: "Length is not filled for [variables]"
    - Solution: Review metadata and fill in missing lengths
+
+4. **Unexpected Variable's Value Retain**
+   - Occurs when: set the EMPTY_[dsname] with a non-empty dataset, and do some further data processing in the same datastep
+   - Solution: separate the setting of the data from the postprocessing into two datasteps.
+   </br>Examples:
+   ```sas
+   /* This will cause an issue: */
+   data <dataset_name>;
+      set &empty._domain <rawdata>;
+      <data processing statements>;
+   run;
+
+   /* Correct use: */
+   data <dataset_name>;
+      set &empty_domain. <rawdata>;
+   run;
+
+   data <dataset_name_1>;
+      set <dataset_name>;
+      <data processing statements>;
+   run;
+   ```
+5. **Erroneous assumption the ADaM metadata is being used when it is not**.
+   - Occurs when: used for the "spit" datasets (LBSA, LBPD, LBCHEM, etc.) the macro assumes it is ADaM dataset, because the name exceeds two characters (SUPPXX datasets and RELREC are special cases and are accounted for)
+   - Solution: explicitly specify SDTM metadata file name in corresponding macro parameter.
 
 ## Notes and Limitations
 1. Metadata file must follow standard structure with required columns:
@@ -107,7 +132,7 @@ The `%xtmeta` macro creates a zero-record dataset based on metadata specificatio
 ## See Also
 - [`%xtcore`](/man/global/xtcore.md): Uses metadata for core variable processing
 - [`%xtorder`](/man/global/xtorder.md): Orders variables according to metadata
-- [`%xdalign`](/man/global/xdalign.md): Aligns datasets with metadata specifications
+- [`%kutitles`](/man/study_specific/kutitles.md): Title and footnote management
 
 ## Change Log
 ### Version 1.0 (20JUL2022)

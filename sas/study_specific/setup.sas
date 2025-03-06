@@ -2,7 +2,7 @@
 * Program/Macro:             setup.sas
 * Protocol:                  
 * SAS Ver:                   SAS 9.4 V9
-* Author:                    Rostyslav Didenko
+* Author:                    Atorus Research
 * Date:                      18FEB2021
 * Program Title:             
 *

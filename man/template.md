@@ -64,7 +64,7 @@ Detailed description of:
 - Important note 2
 - Known limitations
 
-## Related Macros
+## See Also
 - Link to related macro 1
 - Link to related macro 2
 

@@ -1,7 +1,7 @@
 # %xucomm - Create SDTM Comments (CO) Domain Records
 
 ## Overview
-The `%xucomm` macro creates SDTM Comments (CO) domain records from source datasets. It processes comments from any SDTM domain and creates standardized CO records following CDISC SDTM standards, with proper sequencing and handling of multiple comment lines.
+The `%xucomm` macro creates SDTM Comments (CO) domain records from source datasets. It processes comments from any SDTM domain and creates standardized CO records following CDISC SDTM standards, with proper handling of multiple comment lines.
 
 ## Version Information
 - **Version**: 1.0

@@ -98,6 +98,15 @@ Creates or updates SUPP[domain] dataset containing:
 | Missing domain variable | Set global domain variable before call |
 | Duplicate records | Check input data uniqueness |
 | Missing labels | Specify qlabel or add variable labels |
+| ERROR: Required operator not found in expression: &qlabel. ^= even though it is provided | Make sure "(", ")" are "escaped" with escapechar; </br> see example below |
+
+```sas
+/* For example this will trigger error */
+%xusupp(&domain., mlcho, idvar=mlseq, qlabel=%str(Carbohydrates (g)), qorig=CRF);
+
+/* Use this instead */
+%xusupp(&domain., mlcho, idvar=mlseq, qlabel=%str(Carbohydrates %(g%)), qorig=CRF); |
+```
 
 ## Notes and Limitations
 - Requires pre-existing empty SUPP domain template

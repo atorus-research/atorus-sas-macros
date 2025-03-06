@@ -113,7 +113,7 @@ Lst path: C:/Projects/Client/Compound/Protocol/Task/final/sdtm/lst/
 
 ## See Also
 - [`%xumprint`](/man/global/xumprint.md): Calls `%xuprogpath` for program information
-- [`%xucomm`](/man/global/xucomm.md): Uses path information for documentation
+- [`setup.sas`](/man/study_specific/setup.md): Sets up the study global variables and libnames
 - Other setup and initialization macros
 
 ## Change Log

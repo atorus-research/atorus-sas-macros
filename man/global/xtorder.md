@@ -77,6 +77,10 @@ The `%xtorder` macro creates a global macro variable containing the sort order f
 3. **Missing Key Variables**
    - Issue: Empty SORTSTRING created
    - Solution: Check "Key Variables" column in metadata
+   
+4. **Erroneous assumption the ADaM metadata is being used when it is not**.
+   - Occurs when: used for the "spit" datasets (LBSA, LBPD, LBCHEM, etc.) the macro assumes it is ADaM dataset, because the name exceeds two characters (SUPPXX datasets and RELREC are special cases and are accounted for)
+   - Solution: explicitly specify SDTM metadata file name in corresponding macro parameter.
 
 ## Notes and Limitations
 1. Metadata file must follow standard structure with required columns:
