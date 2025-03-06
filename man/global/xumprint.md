@@ -42,7 +42,7 @@ The `%xumprint` macro manages SAS log and listing file handling, providing funct
    - Cleans macro cache (deletes previously resolved macros)
    - Calls xuprogpath for task/program globals
    - Redirects output to specified files
-   - Includes setup.sas for environment configuration
+   - Includes [`setup.sas`](/man/study_specific/setup.md) for environment configuration
 
 3. When route=NO:
    - Restores default output destinations
@@ -88,7 +88,7 @@ The `%xumprint` macro manages SAS log and listing file handling, providing funct
 
 ## See Also
 - [`%xuprogpath`](/man/global/xuprogpath.md) - Program path management
-- setup.sas - Environment configuration
+- [`setup.sas`](/man/study_specific/setup.md) - For assigning required libnames and sasautos
 - Other logging and output management macros
 
 ## Change Log

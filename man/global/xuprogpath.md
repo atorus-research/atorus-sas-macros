@@ -62,7 +62,7 @@ Creates the following global variables:
 
 ## Examples
 ```sas
-/* Basic usage - typically called by setup.sas or %xumprint */
+/* Basic usage - typically called by [`setup.sas`](/man/study_specific/setup.md) or %xumprint */
 %xuprogpath;
 
 /* Example output in log:
@@ -109,7 +109,7 @@ Lst path: C:/Projects/Client/Compound/Protocol/Task/final/sdtm/lst/
    - Optional sponsor level: Client/Compound/Protocol
    - Standard level: Compound/Protocol
 3. Assumes standard folder types (development/final) and program types (sdtm/adam/tlf).
-4. Should be called automatically by `%xumprint` or setup.sas.
+4. Should be called automatically by `%xumprint` or [`setup.sas`](/man/study_specific/setup.md).
 
 ## See Also
 - [`%xumprint`](/man/global/xumprint.md): Calls `%xuprogpath` for program information
