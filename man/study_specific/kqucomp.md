@@ -68,8 +68,8 @@ The `%kqucomp` macro performs dataset comparisons between production and QC vers
 
 ## Examples
 ```sas
-/* Basic comparison of DM domain */
-%kqucomp(base=DM, prod_lib=sdtm, supp=Y, com=Y);
+/* Basic comparison of LB domain */
+%kqucomp(base=LB, prod_lib=sdtm, supp=Y, com=Y);
 
 /* Custom comparison with specific criteria */
 %kqucomp(base=ADSL,

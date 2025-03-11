@@ -61,9 +61,9 @@ Creates a dataset containing:
 ### Custom Output Dataset
 ```sas
 %xuvisit(
-    inds=ae,
-    dtcdate=aestdtc,
-    outds=ae_visit
+    inds=vs,
+    dtcdate=vsdtc,
+    outds=vs_visit
 );
 ```
 

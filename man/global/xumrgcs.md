@@ -55,8 +55,8 @@ The `%xumrgcs` macro merges Supplemental Qualifiers (SUPP--) and Comments (CO) d
 
 ## Examples
 ```sas
-/* Merge both SUPP and CO for DM and AE domains */
-%xumrgcs(dm ae, sdtm, supp=Y, co=Y);
+/* Merge both SUPP and CO for LB and AE domains */
+%xumrgcs(lb ae, sdtm, supp=Y, co=Y);
 
 /* Merge only SUPP for PR domain */
 %xumrgcs(pr, sdtm, supp=Y, co=N);
