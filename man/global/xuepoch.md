@@ -49,7 +49,7 @@ The `%xuepoch` macro derives the EPOCH variable for SDTM datasets using the Stud
 %xuepoch(lb, lbdtc);
 
 /* Specify custom output dataset */
-%xuepoch(ae, aedtc, outds=ae_with_epoch);
+%xuepoch(ae, aestdtc, outds=ae_with_epoch);
 
 /* Keep temporary datasets for debugging */
 %xuepoch(vs, vsdtc, debug=Y);
