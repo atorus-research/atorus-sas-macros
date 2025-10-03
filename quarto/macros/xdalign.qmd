@@ -1,0 +1,42 @@
+---
+title: "xdalign"
+---
+
+## Description
+
+Proper numbers alignment in PDF or RTF: period under period (decimal alignment)
+
+## Parameters
+
+**`invar`**
+
+: Input variable name
+
+  *Required:* Yes
+
+**`type`**
+
+: Type of the output, extension
+
+  *Required:* No
+
+  *Default:* `RTF`
+
+**`escapechar`**
+
+: Escape character
+
+  *Required:* No
+
+**`len`**
+
+: Length of the whole variable in the output, including indentation
+
+  *Required:* Yes
+
+## Examples
+
+```sas
+%xdalign(trt_1,type=PDF,len=6);
+```
+

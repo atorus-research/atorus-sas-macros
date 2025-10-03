@@ -1,29 +1,24 @@
-/************************************************************************************
-* Program/Macro:             xcdtc2dt.sas
-* Protocol:
-* SAS Ver:                   SAS 9.4 V9
-* Author:					 Atorus Research
-* Date:						 19FEB2021
-* Program Title:             
+/**
+* @file xcdtc2dt.sas
+* @brief Convert character --DTC variable into analysis -DT -TM -DTM
+* @details Also creates analysis -DY variable.
 *
-* Description:               Convert character --DTC variable into analysis -DT -TM -DTM. Also
-*                            creates analysis -DY variable.
-* Remarks:
-* Input:					 &dtcdate variable and &refdate variable if specified
-* Output:					 &prefix.dtm, &prefix.dt, &prefix.tm variables, and &prefix.dy variable if &refdate is specified
+* @author Atorus Research
+* @date 19FEB2021
 *
-* Parameters:                dtcdate - name of --DTC variable.
-*                            prefix - prefix for numeric analysis date.
-*                            refdate - numeric reference date.
+* @param[in] dtcdate Name of --DTC variable (Required)
+* @param[in] prefix Prefix for numeric -DT -TM -DTM -DY analysis variables (Default: a)
+* @param[in] refdate Reference numeric date (Optional)
 *
-* Sample Call:               %xcdtc2dt(aestdtc, prefix=ast, refdate=trtsdt);
+* @return Creates &prefix.dtm, &prefix.dt, &prefix.tm variables, and &prefix.dy variable if &refdate is specified
 *
-* Assumptions:
-* Revisions:
-* Revision #    Programmer                     Date                Description of Change(s)
-* ----------    ----------------------         ------------        ---------------------------
+* @par Example:
+* @code
+* %xcdtc2dt(aestdtc, prefix=ast, refdate=trtsdt);
+* @endcode
 *
-************************************************************************************/
+* @see N/A
+*/
 
 %macro xcdtc2dt(dtcdate /*Required. Name of --DTC variable.*/,
                 prefix=a /*Default: a. Prefix for numeric -DT -TM -DTM -DY analysis variables.*/,

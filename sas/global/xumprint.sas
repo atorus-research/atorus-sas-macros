@@ -1,30 +1,24 @@
-/************************************************************************************
-* Program/Macro:             xumprint.sas
-* Protocol:                  
-* SAS Ver:                   SAS 9.4 V9
-* Author:                    Atorus Research
-* Date:                      19FEB2021
-* Program Title:             
+/**
+* @file xumprint.sas
+* @brief Save log and lst files and upload log file back to SAS session
+* @details Converts notes of interest into warnings. This macro is like DO-END and should be called at the start
+*          of the program with route=YES and at the end of the program with no parameters specified.
 *
-* Description:               Macro which saves log and lst files and uploads log file back to SAS session.
-*							 Also converts notes of interest into warnings. This macro is like DO-END
-*                            and should be called at the start of the program with route=YES and
-*                            at the end of the program with no parameters specified.
-* Remarks:                   This macro calls %xuprogpath and setup.sas to setup required global variables and libnames.
-* Input:                     N/A
-* Output:   				 N/A
-* 
-* Parameters:                route - specify YES to save lst and log files. Leave blank to read log back to SAS EG.                            
-*                            
-* Sample Call:               %xumprint(route=YES);
-*                            %xumprint();
+* @author Atorus Research
+* @date 19FEB2021
 *
-* Assumptions:               
-* Revisions:                
-* Revision #	Programmer 	                   Date 	     	   Description of Change(s)
-* ----------    ----------------------         ------------        ---------------------------
+* @param[in] route Specify YES to save lst and log files. Leave blank to read log back to SAS EG (Default: NO)
 *
-************************************************************************************/
+* @par Example:
+* @code
+* %xumprint(route=YES);
+* %xumprint();
+* @endcode
+*
+* @remarks This macro calls %xuprogpath and setup.sas to setup required global variables and libnames.
+*
+* @see xuprogpath
+*/
 
 %macro xumprint(route=NO /*Default: NO. If NO then uploads log file back to SAS EG. Specify YES to save output lst and log files.*/);
 

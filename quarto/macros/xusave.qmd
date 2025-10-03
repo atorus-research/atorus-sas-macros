@@ -1,0 +1,70 @@
+---
+title: "xusave"
+---
+
+## Description
+
+Keep needed variables, apply sorting order, apply dataset label and save .sas7bdat and .xpt files permanently.
+
+## Parameters
+
+**`inds`**
+
+: Name of the input dataset
+
+  *Required:* Yes
+
+**`outlib`**
+
+: Name of the output library
+
+  *Required:* Yes
+
+**`outds`**
+
+: Name of the output dataset
+
+  *Required:* No
+
+  *Default:* `&inds`
+
+**`keepvars`**
+
+: List of variables to keep
+
+  *Required:* No
+
+**`sortvars`**
+
+: Sort order for the dataset
+
+  *Required:* No
+
+**`dslbl`**
+
+: Label for the dataset
+
+  *Required:* No
+
+**`xpt`**
+
+: Flag that determines whether to save .xpt file or not
+
+  *Required:* No
+
+  *Default:* `N`
+
+**`debug`**
+
+: Flag that determines whether to delete temporary datasets or not
+
+  *Required:* No
+
+  *Default:* `N`
+
+## Examples
+
+```sas
+%xusave(dm,sdtm,outds=dm,keepvars=studyidusubjid...,sortvars=usubjid,dslbl=Demographics,xpt=Y);
+```
+

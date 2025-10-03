@@ -1,33 +1,26 @@
-/************************************************************************************
-* Program/Macro:             kqucomp.sas
-* Protocol:                  
-* SAS Ver:                   SAS 9.4 V9
-* Author:                    Atorus Research
-* Date:                      20Aug2021
-* Program Title:             
+/**
+* @file kqucomp.sas
+* @brief Compare datasets
 *
-* Description:               Macro which compares the datasets.
-* Remarks:
-* Input:                     
-* Output:                    
-* Parameters:                base - name of the dataset which is used as base in compare procedure.
-*							 qc - prefix of the qc dataset name.
-*							 id - list of id variables.
-*							 prod_lib - name of the library from which base dataset is uploaded.
-*							 qc_lib - name of the library from which qc dataset is uploaded.
-*							 crit - criterion for the compare procedure, if needed.
-*							 supp - flag, that determines whether to compare SUPP-- dataset, or not.
-*							 com - flag, that determines whether to compare comments dataset, or not.
-*                            
-* Sample Call:               %kqucomp(base = DM, prod_lib = sdtm, supp = Y, com = Y);
+* @author Atorus Research
+* @date 20Aug2021
 *
-* Assumptions:               
-* Revisions:                
-* Revision #	Programmer 	                   Date 	     	   Description of Change(s)
+* @param[in] base Name of the dataset which is used as base in compare procedure (Required)
+* @param[in] qc Prefix of the qc dataset name (Optional)
+* @param[in] id List of id variables (Optional)
+* @param[in] prod_lib Name of the library from which base dataset is uploaded (Required)
+* @param[in] qc_lib Name of the library from which qc dataset is uploaded (Required)
+* @param[in] crit Criterion for the compare procedure, if needed (Optional)
+* @param[in] supp Flag that determines whether to compare SUPP-- dataset or not (Default: N)
+* @param[in] com Flag that determines whether to compare comments dataset or not (Default: N)
 *
-* ----------    ----------------------         ------------        ---------------------------
+* @par Example:
+* @code
+* %kqucomp(base = DM, prod_lib = sdtm, supp = Y, com = Y);
+* @endcode
 *
-************************************************************************************/
+* @see N/A
+*/
 
 %macro kqucomp(base=&domain. /*Default: &domain. Name of the dataset which is used as base in compare procedure.*/,
 			   qc=qc /*Default: qc. Prefix of the qc dataset name.*/,

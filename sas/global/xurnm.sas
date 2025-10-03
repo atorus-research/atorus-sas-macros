@@ -1,31 +1,26 @@
-/************************************************************************************
-* Program/Macro:             xurnm.sas
-* Protocol:                  
-* SAS Ver:                   SAS 9.4 V9
-* Author:                    Atorus Research
-* Date:                      14JUL2022
-* Program Title:             
+/**
+* @file xurnm.sas
+* @brief Rename all variables in the dataset
 *
-* Description:               Macro which renames all variables in the dataset.
-* Remarks:
-* Input:                     &inds input dataset
-* Output:                    &outds dataset with all variables renamed
+* @author Atorus Research
+* @date 14JUL2022
 *
-* Parameters:                inds - name of the input dataset.
-*							 mode - (add/remove). Choose whether it add prefix or remove some characters.
-*							 prefix - characters to add before variable name.
-*							 rchar - number of characters to remove from the beginning of variable name.
-*                            debug - flag, that determines whether to delete temporary datasets or not.
+* @param[in] inds Name of the input dataset (Required)
+* @param[in] mode Mode: add/remove. Choose whether to add prefix or remove some characters (Required)
+* @param[in] prefix Characters to add before variable name (Optional, used with mode=add)
+* @param[in] rchar Number of characters to remove from the beginning of variable name (Optional, used with mode=remove)
+* @param[in] debug Flag that determines whether to delete temporary datasets or not (Default: N)
 *
-* Sample Call:               %xurnm(ds, mode = add, prefix = _);
-* 							 %xurnm(ds, mode = remove, rchar = 2);
+* @return &outds dataset with all variables renamed
 *
-* Assumptions:               
-* Revisions:                
-* Revision #	Programmer 	                   Date 	     	   Description of Change(s)
-* ----------    ----------------------         ------------        ---------------------------
+* @par Example:
+* @code
+* %xurnm(ds, mode = add, prefix = _);
+* %xurnm(ds, mode = remove, rchar = 2);
+* @endcode
 *
-************************************************************************************/
+* @see N/A
+*/
 
 %macro xurnm(inds /*Required. Name of the input dataset.*/,
 			 mode=add /*Default: add. Working mode (add/remove).*/,

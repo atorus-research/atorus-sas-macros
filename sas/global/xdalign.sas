@@ -1,30 +1,24 @@
-/************************************************************************************
-* Program/Macro:             xdalign.sas
-* Protocol:                  
-* SAS Ver:                   SAS 9.4 V9
-* Author:                    Atorus Research
-* Date:                      05MAY2021
-* Program Title:             
+/**
+* @file xdalign.sas
+* @brief Proper numbers alignment in PDF or RTF: period under period (decimal alignment)
 *
-* Description:               Macro to do proper numbers allignment in PDF or RTF: period
-*                            under period (decimal alignment).
-* Remarks:
-* Input:                     &invar variable
-* Output:                    &invar variable with alignment
+* @author Atorus Research
+* @date 05MAY2021
 *
-* Parameters:                invar - input variable name.
-*                            type - type of the output, extension.
-* 							 escapechar - escape character.
-*                            len - length of the whole variable in the output, including indentation.
+* @param[in] invar Input variable name (Required)
+* @param[in] type Type of the output, extension (Default: RTF)
+* @param[in] escapechar Escape character (Optional)
+* @param[in] len Length of the whole variable in the output, including indentation (Required)
 *
-* Sample Call:               %xdalign(trt_1, type=PDF, len=6);
+* @return &invar variable with alignment
 *
-* Assumptions:               
-* Revisions:                
-* Revision #	Programmer 	                   Date 	     	   Description of Change(s)
-* ----------    ----------------------         ------------        ---------------------------
+* @par Example:
+* @code
+* %xdalign(trt_1, type=PDF, len=6);
+* @endcode
 *
-************************************************************************************/
+* @see N/A
+*/
 
 %macro xdalign(invar /*Required. Input variable name.*/,
                type=RTF, /*Default: RTF. Type of the output, extension.*/

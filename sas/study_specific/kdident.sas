@@ -1,32 +1,27 @@
-/************************************************************************************
-* Program/Macro:             kdident.sas
-* Protocol:                  
-* SAS Ver:                   SAS 9.4 V9
-* Author:                    Atorus Research
-* Date:                      21OCT2021
-* Program Title:             
+/**
+* @file kdident.sas
+* @brief Beautifully split character variables for output in table/listing
 *
-* Description:               Macro for beautifully splitting character variables for output in table/listing
-* Remarks:
-* Input:                     &invar variable
-* Output:                    &outvar variable
+* @author Atorus Research
+* @date 21OCT2021
 *
-* Parameters:                invar - name of the input variable.
-*			   				 outvar - name of the output variable.
-*			   				 maxln - maximum number of character allowed per line.
-*			   				 tabchar - tabulation characters, used to pad newlines.
-*			   				 newlchar - newline character.
-*			   				 debug - flag, that determines whether to delete temporary variables or not.
+* @param[in] invar Name of the input variable (Required)
+* @param[in] maxln Maximum number of characters allowed per line (Required)
+* @param[in] outvar Name of the output variable (Default: &invar._new)
+* @param[in] tabchar Tabulation characters, used to pad newlines (Default: %str($ $ $ ))
+* @param[in] newlchar Newline character (Default: %str($n))
+* @param[in] debug Flag that determines whether to delete temporary variables or not (Default: N)
 *
-* Sample Call:               %kdident(aebodsys, 17);
-*							 %kdident(lbcomm1, 32, outvar=col10, tabchar=%str());
+* @return &outvar variable with split text
 *
-* Assumptions:               
-* Revisions:                
-* Revision #	Programmer 	                   Date 	     	   Description of Change(s)
-* ----------    ----------------------         ------------        ---------------------------
+* @par Example:
+* @code
+* %kdident(aebodsys, 17);
+* %kdident(lbcomm1, 32, outvar=col10, tabchar=%str());
+* @endcode
 *
-************************************************************************************/
+* @see N/A
+*/
 
 %macro kdident(invar /*Required. Name of the input variable.*/,
 			   maxln /*Required. Maximum number of character allowed per line.*/,

@@ -1,0 +1,61 @@
+---
+title: "kutitles"
+---
+
+## Description
+
+Assign titles according to TFL_titles.csv file.
+
+## Parameters
+
+**`progname`**
+
+: Name of the SAS program, which is used for search in TFL_titles.csv
+
+  *Required:* Yes
+
+**`filepath`**
+
+: Full path to TFL_titles.csv
+
+  *Required:* No
+
+**`seq`**
+
+: Sequence number of the output in TFL_titles.csv file
+
+  *Required:* No
+
+  *Default:* `1`
+
+**`justify`**
+
+: Option that determines the alignment of titles
+
+  *Required:* No
+
+  *Default:* `c`
+
+**`escapechar`**
+
+: Escape character
+
+  *Required:* No
+
+  *Default:* `$`
+
+**`debug`**
+
+: Flag that determines whether to delete temporary datasets or not
+
+  *Required:* No
+
+  *Default:* `N`
+
+## Examples
+
+```sas
+%kutitles(s_000_ae3,seq=1);
+%kutitles(l_000_dm,seq=1);
+```
+

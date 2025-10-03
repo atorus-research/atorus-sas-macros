@@ -1,31 +1,26 @@
-/************************************************************************************
-* Program/Macro:             xucomm.sas
-* Protocol:                  
-* SAS Ver:                   SAS 9.4 V9
-* Author:                    Atorus Research
-* Date:                      15JUL2022
-* Program Title:             
+/**
+* @file xucomm.sas
+* @brief Creates CO domain records from the dataset
 *
-* Description:               Macro which creates CO domain records from the dataset.
-* Remarks:
-* Input:                     &inds input dataset
-* Output:                    XX_comm dataset with comments
+* @author Atorus Research
+* @date 15JUL2022
 *
-* Parameters:                inds - name of the input dataset.
-*							 invar - name of the input variable to get comments from.
-*							 idvar - name of the id variable.
-*							 qc - flag to indicate if macro is used on QC side.
-*							 debug - flag, that determines whether to delete temporary datasets or not.
-*                            
-* Sample Call:               %xucomm(dm, dmcomm);
-*							 %xucomm(qclb, lbcomm, idvar=lbseq, qc=Y);
+* @param[in] inds Name of the input dataset to get comments from (Required)
+* @param[in] invar Name of the input variable to get comments from (Required)
+* @param[in] idvar Name of the id variable (Optional)
+* @param[in] qc Flag to indicate if macro is used on QC side (Default: N)
+* @param[in] debug Flag that determines whether to delete temporary datasets or not (Default: N)
 *
-* Assumptions:               
-* Revisions:                
-* Revision #	Programmer 	                   Date 	     	   Description of Change(s)
-* ----------    ----------------------         ------------        ---------------------------
-* 
-************************************************************************************/
+* @return XX_comm dataset with comments
+*
+* @par Example:
+* @code
+* %xucomm(dm, dmcomm);
+* %xucomm(qclb, lbcomm, idvar=lbseq, qc=Y);
+* @endcode
+*
+* @see N/A
+*/
 
 %macro xucomm(inds /*Required. Name of the input dataset to get comments from.*/,
 			  invar /*Required. Name of the input variable to get comment from.*/,

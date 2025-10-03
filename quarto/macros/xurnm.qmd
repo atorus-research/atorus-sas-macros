@@ -1,0 +1,45 @@
+---
+title: "xurnm"
+---
+
+## Description
+
+Rename all variables in the dataset.
+
+## Parameters
+
+**`inds`**
+
+: Name of the input dataset
+
+  *Required:* Yes
+
+**`mode`**
+
+: Mode: add/remove. Choose whether to add prefix or remove some characters
+
+  *Required:* Yes
+
+**`prefix`**
+
+: Characters to add before variable name (Optional, used with mode=add)
+
+**`rchar`**
+
+: Number of characters to remove from the beginning of variable name (Optional, used with mode=remove)
+
+**`debug`**
+
+: Flag that determines whether to delete temporary datasets or not
+
+  *Required:* No
+
+  *Default:* `N`
+
+## Examples
+
+```sas
+%xurnm(ds,mode=add,prefix=_);
+%xurnm(ds,mode=remove,rchar=2);
+```
+

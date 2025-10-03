@@ -1,32 +1,28 @@
-/************************************************************************************
-* Program/Macro:             xufmt.sas
-* Protocol:                  
-* SAS Ver:                   SAS 9.4 V9
-* Author:                    Atorus Research
-* Date:                      13JUL2022
-* Program Title:             
+/**
+* @file xufmt.sas
+* @brief Create SAS formats from spec Codelist tab
 *
-* Description:               Create SAS formats from spec Codelist tab
-* Remarks:					 
-* Input:                     SDTM_spec_Codelist.csv or ADaM_spec_Codelist.csv
-* Output:                    SAS formats from spec Codelist tab
+* @author Atorus Research
+* @date 13JUL2022
 *
-* Parameters:                fmt - format name(s) to get from file specified in filename.
-* 							 filename - indicates source file to use: SDTM_spec_Codelist.csv or ADaM_spec_Codelist.csv.
-* 							 filepath - indicates path to source file.
-*							 debug - flag, that determines whether to delete temporary datasets or not.
-*                            
-* Sample Call:               %xufmt(VSPARAM, ADaM_spec_Codelist.csv);
-* 							 %xufmt(RACE SEX, SDTM_spec_Codelist.csv);
+* @param[in] fmt Format name(s) to get from file specified in filename (Required)
+* @param[in] filename Source file to use: SDTM_spec_Codelist.csv or ADaM_spec_Codelist.csv (Required)
+* @param[in] filepath Path to source file (Optional)
+* @param[in] debug Flag that determines whether to delete temporary datasets or not (Default: N)
 *
-* Assumptions:               SDTM_spec_Codelist.csv or ADaM_spec_Codelist.csv should be already created
-* 							 in spec directory.
-* 							 Maximum length of codelist name should not exceed 29 characters.
-* Revisions:                
-* Revision #	Programmer 	                   Date 	     	   Description of Change(s)
-* ----------    ----------------------         ------------        ---------------------------
+* @return SAS formats from spec Codelist tab
 *
-************************************************************************************/
+* @par Example:
+* @code
+* %xufmt(VSPARAM, ADaM_spec_Codelist.csv);
+* %xufmt(RACE SEX, SDTM_spec_Codelist.csv);
+* @endcode
+*
+* @remarks SDTM_spec_Codelist.csv or ADaM_spec_Codelist.csv should be already created in spec directory.
+*          Maximum length of codelist name should not exceed 29 characters.
+*
+* @see N/A
+*/
 
 %macro xufmt(fmt /*Required. Defines codelist names to create formats for.*/,			 
 			 filename /*Required. Defines source file to use.*/,

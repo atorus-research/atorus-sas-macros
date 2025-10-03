@@ -1,0 +1,60 @@
+---
+title: "xusupp"
+---
+
+## Description
+
+Create and add variables to SUPP domain.
+
+## Parameters
+
+**`inds`**
+
+: Name of the input dataset
+
+  *Required:* Yes
+
+**`invar`**
+
+: Name of the variable to add to SUPP domain
+
+  *Required:* Yes
+
+**`idvar`**
+
+: Name of the id variable
+
+  *Required:* No
+
+**`qlabel`**
+
+: Text to be displayed in QLABEL variable
+
+  *Required:* Yes
+
+**`qorig`**
+
+: Text to be displayed in QORIG variable
+
+  *Required:* Yes
+
+**`qeval`**
+
+: Text to be displayed in QEVAL variable
+
+  *Required:* No
+
+**`debug`**
+
+: Flag that determines whether to delete temporary datasets or not
+
+  *Required:* No
+
+  *Default:* `N`
+
+## Examples
+
+```sas
+%xusupp(dm,RACEOTH,qlabel=%str(Race,Other),qorig=CRF,qeval=,debug=N);
+```
+

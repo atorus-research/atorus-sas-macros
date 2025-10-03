@@ -1,55 +1,47 @@
-/*============================================================================================*
-* Program Name     : plotrtf.sas
-* Protocol         :
-* SAS Version      : 9.4
-* Author           : Atorus Research
-* Date             : 27-Sep-2024
+/**
+* @file kplotrtf.sas
+* @brief Generate Figure RTF Output
+* @details Macro to generate an RTF file from a final statistical graphics procedure.
+*          The following macro variables must be defined before execution:
+*          - &_oid. - Unique output ID, typically set by %init_oid macro
+*          - &ProjectPath. - Base path for accessing project-specific templates
+*          - &ls8pt. - Number of monospaced characters for 8pt font size
+*          - &ls9pt. - Number of monospaced characters for 9pt font size
+*          - &companyname. - Company name for headers
+*          - &deliveryType. - Type of delivery (e.g., Draft, Final)
+*          - &protocol. - Protocol name for headers
+*          - &studyend. - Study end information (e.g., DBL date)
+*          - &deliveryName. - Delivery name (e.g., Primary Analysis)
+*          - &watermk. - Blank character for spacing, typically %sysfunc(byte(160))
+*          - &RtfOutPath. - Path to save generated RTF output
+*          - &FilePath. - Full path to executing program
+*          - &ProgName. - Name of executing program
 *
-* Program Title    : Generate Figure RTF Output
-* Description      : Macro to generate an RTF file from a final statistical graphics procedure.
-* Remarks          : See Assumptions sections for required macro variables.
-* See Also         : %koutrtf.sas
+* @author Atorus Research
+* @date 27-Sep-2024
 *
-* Dependencies     : Global variables such as `&_oid.`, `&ProjectPath.`, etc. must be defined before execution.
-*                    Colors used (`bio`, `dagr`, `stbr`) must be properly defined in advance.
-*                    External macros, like `%init_oid`, need to be included as part of the repository.
+* @param[in] call Macro call type: OPEN or CLOSE (Required)
+* @param[in] inds Input dataset name (Default: &_oid.)
+* @param[in] sortby Variable for sorting the input dataset (Default: DATA for no sorting)
+* @param[in] MaxPageDigits Number of digits in the last page indicator for 'Page X of Y' (Default: 1)
+* @param[in] escapechar ODS Escape Character to be used (Default: @)
+* @param[in] debug Flag to save interim datasets for debugging purposes Y/N (Default: N)
 *
-* Input            : Final Figure dataset (`inds=` parameter)
-* Output           : RTF file named `&oid..rtf`
+* @return RTF file named &oid..rtf
 *
-* Parameters       :
-*     - call=          : Macro call type, can be 'OPEN' or 'CLOSE'. Must be specified.
-*     - inds=          : Input dataset name. Default: `&_oid.` (set externally).
-*     - sortby=        : Variable for sorting the input dataset. Default is 'DATA' for no sorting.
-*     - MaxPageDigits= : Number of digits in the last page indicator (for 'Page X of Y'). Default: 1.
-*     - escapechar=    : ODS Escape Character to be used. Default: '@'.
-*     - debug=         : Flag to save interim datasets for debugging purposes (Y/N). Default: 'N'.
+* @par Example:
+* @code
+* %plotrtf(call=OPEN, MaxPageDigits=3);
+*     proc sgplot data=...
+*         ...
+*     quit;
+* %plotrtf(call=CLOSE);
+* @endcode
 *
-* Sample Calls     :
-*     %plotrtf(call=OPEN, MaxPageDigits=3);
-*         proc sgplot data=...
-*             ...
-*         quit;
-*     %plotrtf(call=CLOSE);
+* @remarks Colors used (bio, dagr, stbr) must be properly defined in advance.
+*          External macros like %init_oid need to be included as part of the repository.
 *
-* Assumptions          :The following macro variables should be defined prior to calling this macro:
-*       1. `&_oid.`: Unique output ID, typically set by `%init_oid` macro.
-*       2. `&ProjectPath.`: Base path for accessing project-specific templates.
-*       3. `&ls8pt.`: Number of monospaced characters that fit in a line with 8pt font size, used for proper line fitting.
-*       4. `&ls9pt.`: Similar to `&ls8pt.`, but for 9pt font size.
-*       5. `&companyname.`: Name of the company to be displayed in headers.
-*       6. `&deliveryType.`: Type of delivery, e.g., 'Draft', 'Final'. Displayed in headers.
-*       7. `&protocol.`: Protocol name, displayed in headers.
-*       8. `&studyend.`: Study end information, e.g., date of DBL (Database Lock).
-*       9. `&deliveryName.`: Name of the delivery, e.g., 'Primary Analysis'.
-*      10. `&watermk.`: A blank character used for spacing, typically set using `%sysfunc(byte(160))`.
-*      11. `&RtfOutPath.`: Path to save the generated RTF output.
-*      12. `&FilePath.`: Full path to the program executing this macro.
-*      13. `&ProgName.`: Name of the program executing this macro.
-*
-* Revisions:
-* Revision #	Programmer 	                   Date 	     	   Description of Change(s)
-* ----------    ----------------------         ------------        ---------------------------
+* @see koutrtf.sas
 *
 *=============================================================================================*/
 

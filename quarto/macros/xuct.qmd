@@ -1,0 +1,82 @@
+---
+title: "xuct"
+---
+
+## Description
+
+Check if variable values match Codelists tab of spec and CDISC SDTM Controlled Terminology.
+
+## Parameters
+
+**`inds`**
+
+: Name of the input dataset
+
+  *Required:* Yes
+
+**`invar`**
+
+: Name of the variable in input dataset to be checked
+
+  *Required:* Yes
+
+**`codelist`**
+
+: Codelist name as specified in ID column in codelists metadata file
+
+  *Required:* Yes
+
+**`subset`**
+
+: Logical condition to be used in where clause, when variable may have multiple codelists
+
+  *Required:* No
+
+**`filename`**
+
+: Codelists metadata file (Codelists tab of spec converted to .csv file)
+
+  *Required:* No
+
+**`filepath`**
+
+: Path to codelists metadata file
+
+  *Required:* No
+
+**`ctfile`**
+
+: CDISC SDTM Controlled Terminology file converted to CSV
+
+  *Required:* No
+
+**`ctpath`**
+
+: Path to CDISC SDTM Controlled Terminology file, if misc._ct.sas7bdat is missing
+
+  *Required:* No
+
+**`checkct`**
+
+: Flag that determines whether values should be checked for compliance with CDISC SDTM CT
+
+  *Required:* No
+
+  *Default:* `Y`
+
+**`debug`**
+
+: Flag that determines whether to delete temporary datasets or not
+
+  *Required:* No
+
+  *Default:* `N`
+
+## Examples
+
+```sas
+%xuct(cm,CMCAT,CMCAT,checkct=N);
+%xuct(ex,EXDOSU,EX.UNIT,checkct=Y);
+%xuct(lb,LBORRESU,LB.UNIT,checkct=Y);
+```
+

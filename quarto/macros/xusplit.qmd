@@ -1,0 +1,61 @@
+---
+title: "xusplit"
+---
+
+## Description
+
+Split long text variable into multiple shorter sub-variables.
+
+## Parameters
+
+**`inds`**
+
+: Name of the input dataset
+
+  *Required:* Yes
+
+**`invar`**
+
+: Name of the input variable to split
+
+  *Required:* Yes
+
+**`outds`**
+
+: Name of the output dataset
+
+  *Required:* No
+
+  *Default:* `&inds`
+
+**`prefix`**
+
+: Prefix for the output variables names
+
+  *Required:* No
+
+  *Default:* `&invar`
+
+**`len`**
+
+: Length of the output variables
+
+  *Required:* No
+
+  *Default:* `200`
+
+**`debug`**
+
+: Flag that determines whether to delete temporary datasets or not
+
+  *Required:* No
+
+  *Default:* `N`
+
+## Examples
+
+```sas
+%xusplit(cm,cmdecod);
+%xusplit(dv1,temn,outds=dv,prefix=dvterm);
+```
+

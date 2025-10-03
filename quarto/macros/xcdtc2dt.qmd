@@ -1,0 +1,38 @@
+---
+title: "xcdtc2dt"
+---
+
+## Description
+
+Convert character DTC variable into analysis -DT -TM -DTM.
+
+Also creates analysis -DY variable.
+
+## Parameters
+
+**`dtcdate`**
+
+: Name of DTC variable
+
+  *Required:* Yes
+
+**`prefix`**
+
+: Prefix for numeric -DT -TM -DTM -DY analysis variables
+
+  *Required:* No
+
+  *Default:* `a`
+
+**`refdate`**
+
+: Reference numeric date
+
+  *Required:* No
+
+## Examples
+
+```sas
+%xcdtc2dt(aestdtc,prefix=ast,refdate=trtsdt);
+```
+

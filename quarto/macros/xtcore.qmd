@@ -1,0 +1,50 @@
+---
+title: "xtcore"
+---
+
+## Description
+
+Adds ADSL core variables to an analysis dataset.
+
+## Parameters
+
+**`inds`**
+
+: Name of the parent dataset for adding ADSL core variables
+
+  *Required:* Yes
+
+**`outds`**
+
+: Name of the output dataset
+
+  *Required:* No
+
+  *Default:* `&inds`
+
+**`filename`**
+
+: Source file to use: SDTM_spec_Codelist.csv or ADaM_spec_Codelist.csv
+
+  *Required:* No
+
+**`filepath`**
+
+: Path to source file
+
+  *Required:* No
+
+**`debug`**
+
+: Flag that determines whether to delete temporary datasets or not
+
+  *Required:* No
+
+  *Default:* `N`
+
+## Examples
+
+```sas
+%xtcore(adlb);
+```
+

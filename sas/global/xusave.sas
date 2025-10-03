@@ -1,34 +1,28 @@
-/************************************************************************************
-* Program/Macro:             xusave.sas
-* Protocol:                  
-* SAS Ver:                   SAS 9.4 V9
-* Author:                    Atorus Research
-* Date:                      13JUL2022
-* Program Title:             
+/**
+* @file xusave.sas
+* @brief Keep needed variables, apply sorting order, apply dataset label and save .sas7bdat and .xpt files permanently
 *
-* Description:               Macro which keeps needed varibales, applies sorting order,
-*					  		 applies dataset label and saves .sas7bdat and .xpt files permanently.
-* Remarks:
-* Input:                     &inds dataset
-* Output:                    &outds dataset in &outlib library
+* @author Atorus Research
+* @date 13JUL2022
 *
-* Parameters:                inds - name of the input dataset.
-*							 outlib - name of the output library.
-*	 						 outds - name of the output dataset.
-*							 keepvars - list of variables to keep.
-*							 sortvars - sort order for the dataset.
-*							 dslbl - label for the dataset.
-*							 xpt - flag, that determines whether to save .xpt file or not.
-*							 debug - flag, that determines whether to delete temporary datasets or not.
-*                            
-* Sample Call:               %xusave(dm, sdtm, outds=dm, keepvars=studyid usubjid ..., sortvars=usubjid, dslbl=Demographics, xpt=Y);
+* @param[in] inds Name of the input dataset (Required)
+* @param[in] outlib Name of the output library (Required)
+* @param[in] outds Name of the output dataset (Default: &inds)
+* @param[in] keepvars List of variables to keep (Optional)
+* @param[in] sortvars Sort order for the dataset (Optional)
+* @param[in] dslbl Label for the dataset (Optional)
+* @param[in] xpt Flag that determines whether to save .xpt file or not (Default: N)
+* @param[in] debug Flag that determines whether to delete temporary datasets or not (Default: N)
 *
-* Assumptions:               
-* Revisions:                
-* Revision #	Programmer 	                   Date 	     	   Description of Change(s)
-* ----------    ----------------------         ------------        ---------------------------
+* @return &outds dataset in &outlib library
 *
-************************************************************************************/
+* @par Example:
+* @code
+* %xusave(dm, sdtm, outds=dm, keepvars=studyid usubjid ..., sortvars=usubjid, dslbl=Demographics, xpt=Y);
+* @endcode
+*
+* @see N/A
+*/
 
 %macro xusave(inds /*Required. Name of the input dataset.*/,
 			  outlib /*Required. Name of the output library.*/,

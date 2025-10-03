@@ -1,30 +1,25 @@
-/************************************************************************************
-* Program/Macro:             xuseq.sas
-* Protocol:                  
-* SAS Ver:                   SAS 9.4 V9
-* Author:                    Atorus Research
-* Date:                      14JUL2022
-* Program Title:             
+/**
+* @file xuseq.sas
+* @brief Create --SEQ variable
 *
-* Description:               Macro which creates --SEQ variable.
-* Remarks:
-* Input:                     &inds input dataset
-* Output:                    &inds dataset with --SEQ variable
+* @author Atorus Research
+* @date 14JUL2022
 *
-* Parameters:                inds - name of the input dataset.
-*							 sortvars - sort order for the dataset.
-*							 prefix - prefix for the --SEQ variable name.
-*							 debug - flag, that determines whether to delete temporary variables or not.
-*                            
-* Sample Call:               %xuseq(dm, usubjid);
-*							 %xuseq(adlb, usubjid paramcd adt adtm, prefix=a);
+* @param[in] inds Name of the input dataset (Required)
+* @param[in] sortvars Sort order for the dataset (Required)
+* @param[in] prefix Prefix for the --SEQ variable name (Optional)
+* @param[in] debug Flag that determines whether to delete temporary variables or not (Default: N)
 *
-* Assumptions:               
-* Revisions:                
-* Revision #	Programmer 	                   Date 	     	   Description of Change(s)
-* ----------    ----------------------         ------------        ---------------------------
-* 
-************************************************************************************/
+* @return &inds dataset with --SEQ variable
+*
+* @par Example:
+* @code
+* %xuseq(dm, usubjid);
+* %xuseq(adlb, usubjid paramcd adt adtm, prefix=a);
+* @endcode
+*
+* @see N/A
+*/
 
 %macro xuseq(inds /*Required. Name of the input dataset.*/,
 			 sortvars /*Required. Sort order for the dataset.*/,

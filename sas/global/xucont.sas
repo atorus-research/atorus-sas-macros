@@ -1,29 +1,24 @@
-/************************************************************************************
-* Program/Macro:             xucont.sas
-* Protocol:                  
-* SAS Ver:                   SAS 9.4 V9
-* Author:                    Atorus Research
-* Date:                      12AUG2022
-* Program Title:             
+/**
+* @file xucont.sas
+* @brief Executes contents procedure
 *
-* Description:               Macro which executes contents procedure.
-* Remarks:
-* Input:                     &inds dataset from &sourcelib
-* Output:                    contents procedure of &inds
+* @author Atorus Research
+* @date 12AUG2022
 *
-* Parameters:                inds - name(s) of the input dataset(s).
-*							 sourcelib - name of the input library.
-*							 contopts - options for the contents procedure.
-*                            
-* Sample Call:               %xucont(dm suppdm, sdtm);
-*							 %xucont(adsl, adam);
+* @param[in] inds Name(s) of the input dataset(s) (Required)
+* @param[in] sourcelib Name of the input library (Required)
+* @param[in] contopts Options for the contents procedure (Default: varnum)
 *
-* Assumptions:               
-* Revisions:                
-* Revision #	Programmer 	                   Date 	     	   Description of Change(s)
-* ----------    ----------------------         ------------        ---------------------------
+* @return Contents procedure output of &inds
 *
-************************************************************************************/
+* @par Example:
+* @code
+* %xucont(dm suppdm, sdtm);
+* %xucont(adsl, adam);
+* @endcode
+*
+* @see N/A
+*/
 
 %macro xucont(inds /*Required. Name(s) of the input dataset(s).*/,
 			  sourcelib /*Required. Name of the input library.*/,

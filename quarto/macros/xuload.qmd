@@ -1,0 +1,63 @@
+---
+title: "xuload"
+---
+
+## Description
+
+Upload datasets to SAS working directory, apply sorting order, and remove process input formats/informats.
+
+## Parameters
+
+**`inds`**
+
+: Name(s) of the input dataset(s)
+
+  *Required:* Yes
+
+**`sourcelib`**
+
+: Name of the input library
+
+  *Required:* Yes
+
+**`sortvars`**
+
+: Sort order for the dataset
+
+  *Required:* No
+
+**`encoding`**
+
+: Encoding for the dataset
+
+  *Required:* No
+
+**`mode`**
+
+: Format/informat processing mode: smart/keep/remove
+
+  *Required:* No
+
+  *Default:* `smart`
+
+**`fmtlib`**
+
+: Library with .sas7bcat format catalogs
+
+  *Required:* No
+
+**`debug`**
+
+: Flag that determines whether to delete temporary datasets or not
+
+  *Required:* No
+
+  *Default:* `N`
+
+## Examples
+
+```sas
+%xuload(dmae,crf,encoding=asciiany,mode=keep,fmtlib=crf);
+%xuload(dm,sdtm,sortvars=usubjid);
+```
+

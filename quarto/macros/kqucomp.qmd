@@ -1,0 +1,68 @@
+---
+title: "kqucomp"
+---
+
+## Description
+
+Compare datasets.
+
+## Parameters
+
+**`base`**
+
+: Name of the dataset which is used as base in compare procedure
+
+  *Required:* Yes
+
+**`qc`**
+
+: Prefix of the qc dataset name
+
+  *Required:* No
+
+**`id`**
+
+: List of id variables
+
+  *Required:* No
+
+**`prod_lib`**
+
+: Name of the library from which base dataset is uploaded
+
+  *Required:* Yes
+
+**`qc_lib`**
+
+: Name of the library from which qc dataset is uploaded
+
+  *Required:* Yes
+
+**`crit`**
+
+: Criterion for the compare procedure, if needed
+
+  *Required:* No
+
+**`supp`**
+
+: Flag that determines whether to compare SUPP dataset or not
+
+  *Required:* No
+
+  *Default:* `N`
+
+**`com`**
+
+: Flag that determines whether to compare comments dataset or not
+
+  *Required:* No
+
+  *Default:* `N`
+
+## Examples
+
+```sas
+%kqucomp(base=DM,prod_lib=sdtm,supp=Y,com=Y);
+```
+

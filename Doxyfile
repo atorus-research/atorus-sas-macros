@@ -1,0 +1,140 @@
+# Simplified Doxyfile for R-style SAS Macro Documentation
+# Focus on: Description, Parameters, Examples, and Dates
+
+#---------------------------------------------------------------------------
+# Project Information
+#---------------------------------------------------------------------------
+PROJECT_NAME           = "Atorus SAS Macros"
+PROJECT_BRIEF          = "SAS macros for clinical trial data processing"
+OUTPUT_DIRECTORY       = docs
+
+#---------------------------------------------------------------------------
+# Output Format - Simple and Clean
+#---------------------------------------------------------------------------
+GENERATE_HTML          = YES
+GENERATE_XML           = YES
+GENERATE_LATEX         = NO
+GENERATE_RTF           = NO
+GENERATE_MAN           = NO
+
+#---------------------------------------------------------------------------
+# Input Configuration
+#---------------------------------------------------------------------------
+INPUT                  = sas/global \
+                         sas/study_specific
+FILE_PATTERNS          = *.sas
+RECURSIVE              = YES
+EXTENSION_MAPPING      = sas=C
+FILE_PATTERNS          = *.sas
+
+#---------------------------------------------------------------------------
+# Extraction Settings - Focus on documented items only
+#---------------------------------------------------------------------------
+EXTRACT_ALL            = NO
+EXTRACT_PRIVATE        = NO
+EXTRACT_STATIC         = NO
+EXTRACT_LOCAL_CLASSES  = NO
+EXTRACT_LOCAL_METHODS  = NO
+HIDE_UNDOC_MEMBERS     = YES
+HIDE_UNDOC_CLASSES     = YES
+
+#---------------------------------------------------------------------------
+# Documentation Style - Clean and Simple
+#---------------------------------------------------------------------------
+BRIEF_MEMBER_DESC      = YES
+REPEAT_BRIEF           = NO
+ALWAYS_DETAILED_SEC    = YES
+JAVADOC_AUTOBRIEF      = YES
+MARKDOWN_SUPPORT       = YES
+
+#---------------------------------------------------------------------------
+# Hide Unnecessary Sections (R-style simplicity)
+#---------------------------------------------------------------------------
+HIDE_SCOPE_NAMES       = YES
+HIDE_COMPOUND_REFERENCE = YES
+SHOW_HEADERFILE        = NO
+SHOW_INCLUDE_FILES     = NO
+SHOW_GROUPED_MEMB_INC  = NO
+SHOW_USED_FILES        = NO
+SHOW_NAMESPACES        = NO
+SHOW_FILES             = YES
+FILE_VERSION_FILTER    =
+
+#---------------------------------------------------------------------------
+# Disable Complex Features
+#---------------------------------------------------------------------------
+SOURCE_BROWSER         = NO
+INLINE_SOURCES         = NO
+REFERENCED_BY_RELATION = NO
+REFERENCES_RELATION    = NO
+VERBATIM_HEADERS       = NO
+
+#---------------------------------------------------------------------------
+# Disable Graphs and Diagrams
+#---------------------------------------------------------------------------
+HAVE_DOT               = NO
+CLASS_GRAPH            = NO
+COLLABORATION_GRAPH    = NO
+INCLUDE_GRAPH          = NO
+CALL_GRAPH             = NO
+GRAPHICAL_HIERARCHY    = NO
+DIRECTORY_GRAPH        = NO
+
+#---------------------------------------------------------------------------
+# Disable Extra Lists (Keep it Simple)
+#---------------------------------------------------------------------------
+GENERATE_TODOLIST      = NO
+GENERATE_TESTLIST      = NO
+GENERATE_BUGLIST       = NO
+GENERATE_DEPRECATEDLIST = NO
+
+#---------------------------------------------------------------------------
+# Sorting
+#---------------------------------------------------------------------------
+SORT_MEMBER_DOCS       = YES
+SORT_BRIEF_DOCS        = YES
+SORT_GROUP_NAMES       = YES
+
+#---------------------------------------------------------------------------
+# Warning Settings - Less Strict
+#---------------------------------------------------------------------------
+QUIET                  = NO
+WARNINGS               = YES
+WARN_IF_UNDOCUMENTED   = NO
+WARN_NO_PARAMDOC       = NO
+WARN_IF_DOC_ERROR      = YES
+
+#---------------------------------------------------------------------------
+# HTML Output - Clean and Simple
+#---------------------------------------------------------------------------
+HTML_OUTPUT            = html
+HTML_COLORSTYLE        = LIGHT
+GENERATE_TREEVIEW      = NO
+SEARCHENGINE           = YES
+HTML_DYNAMIC_MENUS     = YES
+
+#---------------------------------------------------------------------------
+# XML Output
+#---------------------------------------------------------------------------
+XML_OUTPUT             = xml
+XML_PROGRAMLISTING     = YES
+
+#---------------------------------------------------------------------------
+# Formatting
+#---------------------------------------------------------------------------
+TAB_SIZE               = 4
+OPTIMIZE_OUTPUT_FOR_C  = YES
+FULL_PATH_NAMES        = NO
+STRIP_CODE_COMMENTS    = YES
+CASE_SENSE_NAMES       = YES
+INLINE_INFO            = NO
+SEPARATE_MEMBER_PAGES  = YES
+SUBGROUPING            = NO
+
+#---------------------------------------------------------------------------
+# Preprocessor - Disable to avoid parsing SAS macro variables as C code
+#---------------------------------------------------------------------------
+ENABLE_PREPROCESSING   = NO
+MACRO_EXPANSION        = NO
+EXPAND_ONLY_PREDEF     = NO
+SKIP_FUNCTION_MACROS   = YES

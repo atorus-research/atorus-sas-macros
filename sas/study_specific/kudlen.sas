@@ -1,28 +1,23 @@
-﻿/************************************************************************************
-* Program/Macro:             kudlen.sas
-* Protocol:                  
-* SAS Ver:                   SAS 9.4 V9
-* Author:                    Atorus Research
-* Date:                      20AUG2021
-* Program Title:             
+/**
+* @file kudlen.sas
+* @brief Change variable length to the maximum length of value in it
 *
-* Description:               Change variable length to the maximum length of value in it.
-* Remarks:
-* Input:                     &inds dataset
-* Output:                    &outds dataset with variables length trimmed 
+* @author Atorus Research
+* @date 20AUG2021
 *
-* Parameters:                inds - name of the input dataset.
-* 							 outds - name of output dataset.
-*							 debug - flag, that determines whether to delete temporary datasets or not.
-*                            
-* Sample Call:               %kudlen(dm);
+* @param[in] inds Name of the input dataset (Required)
+* @param[in] outds Name of output dataset (Default: &inds)
+* @param[in] debug Flag that determines whether to delete temporary datasets or not (Default: N)
 *
-* Assumptions:               
-* Revisions:                
-* Revision #	Programmer 	                   Date 	     	   Description of Change(s)
-* ----------    ----------------------         ------------        ---------------------------
+* @return &outds dataset with variables length trimmed
 *
-************************************************************************************/
+* @par Example:
+* @code
+* %kudlen(dm);
+* @endcode
+*
+* @see N/A
+*/
 
 %macro kudlen(inds /*Required. Name of the input dataset.*/,
 			  outds=&inds. /*Default: input dataset. Name of output dataset.*/,

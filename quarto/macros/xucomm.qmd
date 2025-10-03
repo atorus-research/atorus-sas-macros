@@ -1,0 +1,51 @@
+---
+title: "xucomm"
+---
+
+## Description
+
+Creates CO domain records from the dataset.
+
+## Parameters
+
+**`inds`**
+
+: Name of the input dataset to get comments from
+
+  *Required:* Yes
+
+**`invar`**
+
+: Name of the input variable to get comments from
+
+  *Required:* Yes
+
+**`idvar`**
+
+: Name of the id variable
+
+  *Required:* No
+
+**`qc`**
+
+: Flag to indicate if macro is used on QC side
+
+  *Required:* No
+
+  *Default:* `N`
+
+**`debug`**
+
+: Flag that determines whether to delete temporary datasets or not
+
+  *Required:* No
+
+  *Default:* `N`
+
+## Examples
+
+```sas
+%xucomm(dm,dmcomm);
+%xucomm(qclb,lbcomm,idvar=lbseq,qc=Y);
+```
+

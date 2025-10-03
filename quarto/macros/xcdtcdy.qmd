@@ -1,0 +1,29 @@
+---
+title: "xcdtcdy"
+---
+
+## Description
+
+Take two SDTM character DTC dates and calculate SDTM DY variable.
+
+## Parameters
+
+**`dtcdate`**
+
+: Date to calculate DY for
+
+  *Required:* Yes
+
+**`refdate`**
+
+: Reference character date
+
+  *Required:* Yes
+
+## Examples
+
+```sas
+%xcdtcdy(exstdtc,rfstdtc);
+%xcdtcdy(lbdtc,rfstdtc);
+```
+

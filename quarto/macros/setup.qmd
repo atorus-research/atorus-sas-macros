@@ -1,0 +1,10 @@
+---
+title: "setup"
+---
+
+## Description
+
+Setup global variables and create libraries.
+
+Setups global variables __root, __clnt_I, __comp, __prot, __subfolders_I, __task, __level, __side_I using xuprogpath macro. Creates libraries.
+

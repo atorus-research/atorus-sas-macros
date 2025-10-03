@@ -1,0 +1,16 @@
+---
+title: "xuprogpath"
+---
+
+## Description
+
+Find full path to currently executing file and create task-related global variables.
+
+Assumes the file is a program being executed within Atorus standard programming environment.
+
+## Examples
+
+```sas
+%xuprogpath;
+```
+

@@ -1,0 +1,53 @@
+---
+title: "xtmeta"
+---
+
+## Description
+
+Creates a zero record dataset based on a dataset metadata spreadsheet.
+
+Also creates a global macro variable called &dsname.KEEPSTRING.
+
+## Parameters
+
+**`dsname`**
+
+: Dataset to look for in the metadata file
+
+  *Required:* Yes
+
+**`filename`**
+
+: Name of the CSV file with metadata. Determined automatically if empty
+
+  *Required:* No
+
+**`filepath`**
+
+: Full path to CSV file with metadata
+
+  *Required:* No
+
+**`qc`**
+
+: Flag that changes all character variables length to 200
+
+  *Required:* No
+
+  *Default:* `N`
+
+**`debug`**
+
+: Flag that determines whether to delete temporary datasets or not
+
+  *Required:* No
+
+  *Default:* `N`
+
+## Examples
+
+```sas
+%xtmeta(ADSL);
+%xtmeta(AE);
+```
+

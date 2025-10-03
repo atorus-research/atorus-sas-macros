@@ -1,30 +1,25 @@
-/************************************************************************************
-* Program/Macro:             xtorder.sas
-* Protocol:
-* SAS Ver:                   SAS 9.4 V9
-* Author:					 Atorus Research
-* Date:						 20JUL2022
-* Program Title:
+/**
+* @file xtorder.sas
+* @brief Creates a global macro variable called &dsname.SORTSTRING
 *
-* Description:               Creates a global macro variable called &dsname.SORTSTRING.
-* Remarks:
-* Input:					 &filepath.&II.&filename. .csv spreadsheet
-* Output:                    Global macro variable &dsname.SORTSTRING
+* @author Atorus Research
+* @date 20JUL2022
 *
-* Parameters:                dsname - dataset to look for in the metadata file.
-*							 filename - name of the CSV file with metadata. Determined automatically if that parameter is empty.
-*							 filepath - full pass to CSV file with metadata.
-*							 debug - flag, that determines whether to delete temporary datasets or not.
+* @param[in] dsname Dataset to look for in the metadata file (Required)
+* @param[in] filename Name of the CSV file with metadata. Determined automatically if empty (Optional)
+* @param[in] filepath Full path to CSV file with metadata (Optional)
+* @param[in] debug Flag that determines whether to delete temporary datasets or not (Default: N)
 *
-* Sample Call:               %xtorder(ADSL);
-*							 %xtorder(AE);
+* @return Global macro variable &dsname.SORTSTRING
 *
-* Assumptions:
-* Revisions:
-* Revision #	Programmer 	                   Date 	     	   Description of Change(s)
-* ----------    ----------------------         ------------        ---------------------------
+* @par Example:
+* @code
+* %xtorder(ADSL);
+* %xtorder(AE);
+* @endcode
 *
-************************************************************************************/
+* @see N/A
+*/
 
 %macro xtorder(dsname /*Required. Dataset to look for in the metadata file.*/,
 			   filename= /*Optional. Name of the CSV file with metadata. Determined automatically if that parameter is empty.*/,

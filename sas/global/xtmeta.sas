@@ -1,32 +1,27 @@
-/************************************************************************************
-* Program/Macro:             xtmeta.sas
-* Protocol:
-* SAS Ver:                   SAS 9.4 V9
-* Author:					 Atorus Research
-* Date:						 20JUL2022
-* Program Title:
+/**
+* @file xtmeta.sas
+* @brief Creates a zero record dataset based on a dataset metadata spreadsheet
+* @details Also creates a global macro variable called &dsname.KEEPSTRING.
 *
-* Description:               Creates a zero record dataset based on a dataset metadata spreadsheet.
-*							 Also creates a global macro variable called &dsname.KEEPSTRING.
-* Remarks:
-* Input:					 &filepath.&II.&filename. .csv spreadsheet
-* Output:					 Zero record EMPTY_&dsname, global macro variable &dsname.KEEPSTRING
-* 
-* Parameters:                dsname - dataset to look for in the metadata file.
-*							 filename - name of the CSV file with metadata. Determined automatically if that parameter is empty.
-*							 filepath - full pass to CSV file with metadata.
-*							 qc - flag, that changes all character variables length to 200.
-*							 debug - flag, that determines whether to delete temporary datasets or not.
+* @author Atorus Research
+* @date 20JUL2022
 *
-* Sample Call:               %xtmeta(ADSL);
-*							 %xtmeta(AE);
+* @param[in] dsname Dataset to look for in the metadata file (Required)
+* @param[in] filename Name of the CSV file with metadata. Determined automatically if empty (Optional)
+* @param[in] filepath Full path to CSV file with metadata (Optional)
+* @param[in] qc Flag that changes all character variables length to 200 (Default: N)
+* @param[in] debug Flag that determines whether to delete temporary datasets or not (Default: N)
 *
-* Assumptions:
-* Revisions:
-* Revision #	Programmer 	                   Date 	     	   Description of Change(s)
-* ----------    ----------------------         ------------        ---------------------------
+* @return Zero record EMPTY_&dsname, global macro variable &dsname.KEEPSTRING
 *
-************************************************************************************/
+* @par Example:
+* @code
+* %xtmeta(ADSL);
+* %xtmeta(AE);
+* @endcode
+*
+* @see N/A
+*/
 
 %macro xtmeta(dsname /*Required. Dataset to look for in the metadata file.*/,
 			  filename= /*Optional. Name of the CSV file with metadata. Determined automatically if that parameter is empty.*/,

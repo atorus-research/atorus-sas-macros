@@ -1,29 +1,16 @@
-/************************************************************************************
-* Program/Macro:             autoexec.sas
-* Protocol:                  
-* SAS Ver:                   SAS 9.4 V9
-* Author:                    Atorus Research
-* Date:                      19FEB2021
-* Program Title:             
+/**
+* @file autoexec.sas
+* @brief Macro to be placed before each program execution
+* @details Sets defaults based on operating system.
 *
-* Description:               Macro to be placed before each program execution.
-*							 Sets defaults based on operating system.
+* @author Atorus Research
+* @date 19FEB2021
 *
-* Remarks:                   For current process autoexec should be put into same folder as sas.exe
-*                            and it will automatically be pulled in.
-* Input:                     N/A
-* Output:         			 N/A
-* 
-* Parameters:                N/A
-*                            
-* Sample Call:               N/A
+* @remarks For current process autoexec should be put into same folder as sas.exe
+*          and it will automatically be pulled in.
 *
-* Assumptions:               
-* Revisions:                
-* Revision #	Programmer 	                   Date 	     	   Description of Change(s)
-* ----------    ----------------------         ------------        ---------------------------
-*
-************************************************************************************/
+* @see N/A
+*/
 
 %macro init;
 

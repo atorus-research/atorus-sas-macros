@@ -1,0 +1,130 @@
+---
+title: "kqtlfcomp"
+---
+
+## Description
+
+Compare TLF datasets.
+
+Assumptions: Revisions: Revision # Programmer Date Description of Change(s)
+
+## Parameters
+
+**`output`**
+
+: Output name. The macro will look for that dataset name in prod_lib
+
+  *Required:* Yes
+
+**`prod_lib`**
+
+: Library of the production output dataset
+
+  *Required:* Yes
+
+**`qc_lib`**
+
+: Library of the qc output dataset
+
+  *Required:* Yes
+
+**`qc_output`**
+
+: Manually specify dataset name, can be left empty if same as production
+
+  *Required:* No
+
+**`where`**
+
+: Where statement to facilitate investigations, e.g., where=str(lbcat="HEMATOLOGY")
+
+  *Required:* No
+
+**`prod_drop`**
+
+: Variables to be dropped from production. Not advisable to use
+
+  *Required:* No
+
+**`dropchecked`**
+
+: Whether qcer dropped and checked any variables from production dataset before comparing
+
+  *Required:* No
+
+**`ignspl`**
+
+: If Y, comparison changes every split character to a space
+
+  *Required:* No
+
+  *Default:* `N`
+
+**`chrspl`**
+
+: Split character, e.g., chrspl=|
+
+  *Required:* No
+
+**`ignspc`**
+
+: If Y, comparison strips and compbl results before comparing, ignoring alignment differences
+
+  *Required:* No
+
+  *Default:* `N`
+
+**`ignlbl`**
+
+: If Y, comparison removes variable labels before comparing
+
+  *Required:* No
+
+  *Default:* `N`
+
+**`ignln`**
+
+: If Y, ignores variable lengths while comparing
+
+  *Required:* No
+
+  *Default:* `N`
+
+**`ignfor`**
+
+: If Y, comparison removes variable formats before comparing
+
+  *Required:* No
+
+  *Default:* `N`
+
+**`ignifor`**
+
+: If Y, comparison removes variable informats before comparing
+
+  *Required:* No
+
+  *Default:* `N`
+
+**`compress`**
+
+: If Y, comparison removes all spaces before comparing
+
+  *Required:* No
+
+  *Default:* `N`
+
+**`crit`**
+
+: Criterion for the compare procedure
+
+  *Required:* No
+
+**`debug`**
+
+: If Y, allows debugging when macro produces errors
+
+  *Required:* No
+
+  *Default:* `N`
+

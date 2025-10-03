@@ -1,0 +1,10 @@
+---
+title: "autoexec"
+---
+
+## Description
+
+Macro to be placed before each program execution.
+
+Sets defaults based on operating system.
+

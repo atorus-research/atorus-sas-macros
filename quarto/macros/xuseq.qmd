@@ -1,0 +1,43 @@
+---
+title: "xuseq"
+---
+
+## Description
+
+Create SEQ variable.
+
+## Parameters
+
+**`inds`**
+
+: Name of the input dataset
+
+  *Required:* Yes
+
+**`sortvars`**
+
+: Sort order for the dataset
+
+  *Required:* Yes
+
+**`prefix`**
+
+: Prefix for the SEQ variable name
+
+  *Required:* No
+
+**`debug`**
+
+: Flag that determines whether to delete temporary variables or not
+
+  *Required:* No
+
+  *Default:* `N`
+
+## Examples
+
+```sas
+%xuseq(dm,usubjid);
+%xuseq(adlb,usubjidparamcdadtadtm,prefix=a);
+```
+

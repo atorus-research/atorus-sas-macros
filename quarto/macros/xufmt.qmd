@@ -1,0 +1,43 @@
+---
+title: "xufmt"
+---
+
+## Description
+
+Create SAS formats from spec Codelist tab.
+
+## Parameters
+
+**`fmt`**
+
+: Format name(s) to get from file specified in filename
+
+  *Required:* Yes
+
+**`filename`**
+
+: Source file to use: SDTM_spec_Codelist.csv or ADaM_spec_Codelist.csv
+
+  *Required:* Yes
+
+**`filepath`**
+
+: Path to source file
+
+  *Required:* No
+
+**`debug`**
+
+: Flag that determines whether to delete temporary datasets or not
+
+  *Required:* No
+
+  *Default:* `N`
+
+## Examples
+
+```sas
+%xufmt(VSPARAM,ADaM_spec_Codelist.csv);
+%xufmt(RACESEX,SDTM_spec_Codelist.csv);
+```
+

@@ -1,34 +1,28 @@
-/************************************************************************************
-* Program/Macro:             xuload.sas
-* Protocol:                  
-* SAS Ver:                   SAS 9.4 V9
-* Author:                    Atorus Research
-* Date:                      13JUL2022
-* Program Title:             
+/**
+* @file xuload.sas
+* @brief Upload datasets to SAS working directory, apply sorting order, and remove process input formats/informats
 *
-* Description:               Macro which uploads datasets to SAS working directory, applies sorting order,
-*							 and removes process input formats/informats.
-* Remarks:
-* Input:                     &inds input dataset(s) from &sourcelib library
-* Output:                    &inds dataset(s)
+* @author Atorus Research
+* @date 13JUL2022
 *
-* Parameters:                inds - name(s) of the input dataset(s).
-*							 sourcelib - name of the input library.
-*							 sortvars - sort order for the dataset.
-*							 encoding - encoding for the dataset.
-*							 mode - (smart/keep/remove) format/informat processing mode.
-*							 fmtlib - library with .sas7bcat format catalogs.
-*							 debug - flag, that determines whether to delete temporary datasets or not.
-*                            
-* Sample Call:               %xuload(dm ae, crf, encoding=asciiany, mode=keep, fmtlib=crf);
-*							 %xuload(dm, sdtm, sortvars=usubjid);
+* @param[in] inds Name(s) of the input dataset(s) (Required)
+* @param[in] sourcelib Name of the input library (Required)
+* @param[in] sortvars Sort order for the dataset (Optional)
+* @param[in] encoding Encoding for the dataset (Optional)
+* @param[in] mode Format/informat processing mode: smart/keep/remove (Default: smart)
+* @param[in] fmtlib Library with .sas7bcat format catalogs (Optional)
+* @param[in] debug Flag that determines whether to delete temporary datasets or not (Default: N)
 *
-* Assumptions:               
-* Revisions:                
-* Revision #	Programmer 	                   Date 	     	   Description of Change(s)
-* ----------    ----------------------         ------------        ---------------------------
-* 
-************************************************************************************/
+* @return &inds dataset(s) in WORK library
+*
+* @par Example:
+* @code
+* %xuload(dm ae, crf, encoding=asciiany, mode=keep, fmtlib=crf);
+* %xuload(dm, sdtm, sortvars=usubjid);
+* @endcode
+*
+* @see N/A
+*/
 
 %macro xuload(inds /*Required. Name(s) of the input dataset(s).*/,
 			  sourcelib /*Required. Name of the input library.*/,

@@ -1,37 +1,33 @@
-/************************************************************************************
-* Program/Macro:             xuloadcsv.sas
-* Protocol:                  
-* SAS Ver:                   SAS 9.4 V9
-* Author:                    Atorus Research
-* Date:                      18JUL2022
-* Program Title:             
+/**
+* @file xuloadcsv.sas
+* @brief Make one dataset from a collection of raw .csv datasets
 *
-* Description:               Make one dataset from a collection of raw .csv datasets.
+* @author Atorus Research
+* @date 18JUL2022
 *
-* Remarks:                   filename should be defined as regular expression
-* Input:                     csv rawdata file(s) in &filepath
-* Output:                    &outds dataset
+* @param[in] filename Regular expression to filter the files in source directory (Optional)
+* @param[in] filepath Path to raw .csv datasets (Optional)
+* @param[in] splitchar Delimiter used in csv files (Default: $)
+* @param[in] datarow Datarow option in import procedure (Default: 2)
+* @param[in] subjid Regular expression to parse filename and get subject id. Creates subjid_derived variable (Optional)
+* @param[in] visit Regular expression to parse filename and get visit. Creates visit_derived variable (Optional)
+* @param[in] outds Name of the output dataset (Default: out)
+* @param[in] getnames Getnames option in import procedure (Default: YES)
+* @param[in] compress_names Option to remove spaces from variable names (Default: Y)
+* @param[in] debug Option to clean up intermediate datasets after macro execution (Default: N)
 *
-* Parameters:                filename - regular expression to filter the files in source directory.
-*							 filepath - path to raw .csv datasets.
-*							 splitchar - delimiter used in csv files.
-*							 datarow - datarow option in import procedure.
-*							 subjid - regular expression to parse filename and get subject id. Creates subjid_derived variable.
-*							 visit - regular expression to parse filename and get visit. Creates visit_derived variable.
-*							 outds - name of the output dataset.
-*							 getnames - getnames option in import procedure.
-*							 compress_names - option to remove spaces from variable names.
-*							 debug - option to clean up intermediate datasets after macro execution.
-*                            
-* Sample Call:               %xuloadcsv(filename=%str(Clamp),subjid=%str(101-\d{3}),visit=%str(D\d+));
-* 							 %xuloadcsv(filename=%str(^(?!.*(Dummy|PC|PK)).*csv$));
+* @return &outds dataset combining all matching CSV files
 *
-* Assumptions:               
-* Revisions:                
-* Revision #	Programmer 	                   Date 	     	   Description of Change(s)
-* ----------    ----------------------         ------------        ---------------------------
+* @par Example:
+* @code
+* %xuloadcsv(filename=%str(Clamp),subjid=%str(101-\d{3}),visit=%str(D\d+));
+* %xuloadcsv(filename=%str(^(?!.*(Dummy|PC|PK)).*csv$));
+* @endcode
 *
-************************************************************************************/
+* @remarks filename should be defined as regular expression
+*
+* @see N/A
+*/
 
 %macro xuloadcsv(filename /*Required. Regular expression to filter the files in source directory.*/, 
 				 filepath=&__root.&__clnt_I.&II.&__comp.&II.&__prot.&__subfolders_I.&II.&__task.&II.final&II.raw&II.external /*Default: final/raw/external. Path to raw .csv datasets.*/, 

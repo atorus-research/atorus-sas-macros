@@ -1,32 +1,27 @@
-/************************************************************************************
-* Program/Macro:             kutitles.sas
-* Protocol:                  
-* SAS Ver:                   SAS 9.4 V9
-* Author:                    Atorus Research
-* Date:                      17SEP2022
-* Program Title:             
+/**
+* @file kutitles.sas
+* @brief Assign titles according to TFL_titles.csv file
 *
-* Description:               Macro which assigns titles according to TFL_titles.csv file.
-* Remarks:
-* Input:                     TFL_titles.csv
-* Output:                    title1-title5
+* @author Atorus Research
+* @date 17SEP2022
 *
-* Parameters:                progname - name of the SAS program, which is used for search in TFL_titles.csv.
-*							 filepath - full path to TFL_titles.csv.
-* 							 seq - sequence number of the output in TFL_titles.csv file.
-* 							 justify - option that determines the alignment of titles.
-*							 escapechar - escape character.
-* 							 debug - flag, that determines whether to delete temporary datasets or not.
-*                            
-* Sample Call:               %kutitles(s_000_ae3, seq=1);
-*							 %kutitles(l_000_dm, seq=1);
+* @param[in] progname Name of the SAS program, which is used for search in TFL_titles.csv (Required)
+* @param[in] filepath Full path to TFL_titles.csv (Optional)
+* @param[in] seq Sequence number of the output in TFL_titles.csv file (Default: 1)
+* @param[in] justify Option that determines the alignment of titles (Default: c)
+* @param[in] escapechar Escape character (Default: $)
+* @param[in] debug Flag that determines whether to delete temporary datasets or not (Default: N)
 *
-* Assumptions:
-* Revisions:                
-* Revision #	Programmer 	                   Date 	     	   Description of Change(s)
-* ----------    ----------------------         ------------        ---------------------------
+* @return Sets title1-title5
 *
-************************************************************************************/
+* @par Example:
+* @code
+* %kutitles(s_000_ae3, seq=1);
+* %kutitles(l_000_dm, seq=1);
+* @endcode
+*
+* @see N/A
+*/
 
 %macro kutitles(progname /*Required. Name of the SAS program, which is used for search in TFL_titles.csv.*/,
 				filepath=&__root.&__clnt_I.&II.&__comp.&II.&__prot.&__subfolders_I.&II.&__task.&II.final&II.specs /*Default: final/specs. Full path to TFL_titles.csv.*/,

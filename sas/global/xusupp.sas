@@ -1,32 +1,27 @@
-/************************************************************************************
-* Program/Macro:             xusupp.sas
-* Protocol:                  
-* SAS Ver:                   SAS 9.4 V9
-* Author:                    Atorus Research
-* Date:                      18JUL2022
-* Program Title:             
+/**
+* @file xusupp.sas
+* @brief Create and add variables to SUPP-- domain
 *
-* Description:               Macro which creates and adds variables to SUPP-- domain.
-* Remarks:
-* Input:                     &inds input dataset
-* Output:                    SUPPXX dataset
+* @author Atorus Research
+* @date 18JUL2022
 *
-* Parameters:                inds - name of the input dataset.
-*							 invar - name of the variable to add to SUPP-- domain.
-*							 idvar - name of the id variable.
-*							 qlabel - text to be displayed in QLABEL variable.
-*							 qorig - text to be displayed in QORIG variable.
-*							 qeval - text to be displayed in QEVAL variable.
-*							 debug - flag, that determines whether to delete temporary datasets or not.
-*                            
-* Sample Call:               %xusupp(dm, RACEOTH, qlabel=%str(Race, Other), qorig=CRF, qeval=, debug=N);
+* @param[in] inds Name of the input dataset (Required)
+* @param[in] invar Name of the variable to add to SUPP-- domain (Required)
+* @param[in] idvar Name of the id variable (Optional)
+* @param[in] qlabel Text to be displayed in QLABEL variable (Required)
+* @param[in] qorig Text to be displayed in QORIG variable (Required)
+* @param[in] qeval Text to be displayed in QEVAL variable (Optional)
+* @param[in] debug Flag that determines whether to delete temporary datasets or not (Default: N)
 *
-* Assumptions:               
-* Revisions:                
-* Revision #	Programmer 	                   Date 	     	   Description of Change(s)
-* ----------    ----------------------         ------------        ---------------------------
-* 
-************************************************************************************/
+* @return SUPPXX dataset
+*
+* @par Example:
+* @code
+* %xusupp(dm, RACEOTH, qlabel=%str(Race, Other), qorig=CRF, qeval=, debug=N);
+* @endcode
+*
+* @see N/A
+*/
 
 %macro xusupp(inds /*Required. Name of the input dataset.*/,
 			  invar /*Required. Name of the variable to add to --SUPP domain.*/,

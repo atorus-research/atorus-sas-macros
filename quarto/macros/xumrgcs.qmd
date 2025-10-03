@@ -1,0 +1,53 @@
+---
+title: "xumrgcs"
+---
+
+## Description
+
+Merge SUPP and CO to the input SDTM dataset.
+
+## Parameters
+
+**`inds`**
+
+: Name(s) of the input dataset(s)
+
+  *Required:* Yes
+
+**`sourcelib`**
+
+: Name of the input library
+
+  *Required:* Yes
+
+**`supp`**
+
+: Flag that determines whether to merge SUPP dataset or not
+
+  *Required:* No
+
+  *Default:* `Y`
+
+**`co`**
+
+: Flag that determines whether to merge CO dataset or not
+
+  *Required:* No
+
+  *Default:* `Y`
+
+**`debug`**
+
+: Flag that determines whether to delete temporary datasets or not
+
+  *Required:* No
+
+  *Default:* `N`
+
+## Examples
+
+```sas
+%xumrgcs(dmae,sdtm,supp=Y,co=N);
+%xumrgcs(pr,sdtm,supp=Y,co=Y);
+```
+

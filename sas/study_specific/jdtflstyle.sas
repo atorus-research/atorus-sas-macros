@@ -1,38 +1,32 @@
-/************************************************************************************
-* Program/Macro:             jdtflstyle.sas
-* Protocol:                  
-* SAS Ver:                   SAS 9.4 V9
-* Author:                    Atorus Research
-* Date:                      05MAY2021
-* Program Title:             
+/**
+* @file jdtflstyle.sas
+* @brief Style template macro for study PDF/RTF outputs
+* @details Opens ODS PDF/RTF destination and creates PDF/RTF file. Also creates global macro variables with timestamps.
+*          See article https://support.sas.com/resources/papers/proceedings/proceedings/forum2007/225-2007.pdf
+*          for more details on ODS style, markup and tagsets.
 *
-* Description:               A style template macro for study PDF/RTF outputs. Opens
-*                            ODS PDF/RTF destination and creates PDF/RTF file. Also, creates
-*							 global macro variables with timestamps.
-*                            See arcticle https://support.sas.com/resources/papers/proceedings/proceedings/forum2007/225-2007.pdf
-*                            for more details on ODS style, markup and tagsets.
-* Remarks:
-* Input:                     N/A
-* Output:                    &filename.rtf/&filename.pdf in &filepath, &timestamp &tmstmp_date &tmstmp_time global macro variables
+* @author Atorus Research
+* @date 05MAY2021
 *
-* Parameters:                filename - name of the output file.
-*							 filepath - file save path
-*                            type - file extension. RTF/PDF.
-*							 lmarg - left margin size.
-*							 rmarg - right margin size.
-*							 tmarg - top margin size.
-*							 bmarg - bottom margin size.
-*							 escapechar - escape character.
-*                            
-* Sample Call:               %jdtflstyle(T_10_1_1);
-*							 %jdtflstyle(F_15_1_2, bmarg=0.8in);
+* @param[in] filename Name of the output file (Required)
+* @param[in] filepath File save path (Optional)
+* @param[in] type File extension: RTF/PDF (Default: RTF)
+* @param[in] lmarg Left margin size (Default: 1in)
+* @param[in] rmarg Right margin size (Default: 1in)
+* @param[in] tmarg Top margin size (Default: 1in)
+* @param[in] bmarg Bottom margin size (Default: 1in)
+* @param[in] escapechar Escape character (Default: $)
 *
-* Assumptions:               
-* Revisions:                
-* Revision #	Programmer 	                   Date 	     	   Description of Change(s)
-* ----------    ----------------------         ------------        ---------------------------
+* @return &filename.rtf/&filename.pdf in &filepath, &timestamp &tmstmp_date &tmstmp_time global macro variables
 *
-************************************************************************************/
+* @par Example:
+* @code
+* %jdtflstyle(T_10_1_1);
+* %jdtflstyle(F_15_1_2, bmarg=0.8in);
+* @endcode
+*
+* @see N/A
+*/
 
 %macro jdtflstyle(filename /*Required. Name of the output file.*/,
 				  filepath=&__root.&__clnt_I.&II.&__comp.&II.&__prot.&__subfolders_I.&II.&__task.&II.&__level.&__side_I.&II.tfl /*Default: side/tlf. File save path.*/,

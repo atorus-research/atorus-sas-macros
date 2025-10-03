@@ -1,0 +1,49 @@
+project:
+  type: book
+
+book:
+  title: "Atorus SAS Macros Documentation"
+  author: "Atorus Research"
+  chapters:
+    - index.qmd
+    - part: "Global Macros"
+      chapters:
+        - macros/autoexec.qmd
+        - macros/xcdtc2dt.qmd
+        - macros/xcdtcdy.qmd
+        - macros/xdalign.qmd
+        - macros/xtcore.qmd
+        - macros/xtmeta.qmd
+        - macros/xtorder.qmd
+        - macros/xucomm.qmd
+        - macros/xucont.qmd
+        - macros/xuct.qmd
+        - macros/xuepoch.qmd
+        - macros/xufmt.qmd
+        - macros/xuload.qmd
+        - macros/xuloadcsv.qmd
+        - macros/xumprint.qmd
+        - macros/xumrgcs.qmd
+        - macros/xuprogpath.qmd
+        - macros/xurnm.qmd
+        - macros/xusave.qmd
+        - macros/xuseq.qmd
+        - macros/xusplit.qmd
+        - macros/xusupp.qmd
+        - macros/xuvisit.qmd
+    - part: "Study-Specific Macros"
+      chapters:
+        - macros/jdtflstyle.qmd
+        - macros/kdident.qmd
+        - macros/kplotrtf.qmd
+        - macros/kqtlfcomp.qmd
+        - macros/kqucomp.qmd
+        - macros/kudlen.qmd
+        - macros/kutitles.qmd
+        - macros/setup.qmd
+
+format:
+  html:
+    theme: cosmo
+    toc: true
+    number-sections: false

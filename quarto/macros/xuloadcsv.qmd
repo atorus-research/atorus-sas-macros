@@ -1,0 +1,89 @@
+---
+title: "xuloadcsv"
+---
+
+## Description
+
+Make one dataset from a collection of raw .csv datasets.
+
+## Parameters
+
+**`filename`**
+
+: Regular expression to filter the files in source directory
+
+  *Required:* No
+
+**`filepath`**
+
+: Path to raw .csv datasets
+
+  *Required:* No
+
+**`splitchar`**
+
+: Delimiter used in csv files
+
+  *Required:* No
+
+  *Default:* `$`
+
+**`datarow`**
+
+: Datarow option in import procedure
+
+  *Required:* No
+
+  *Default:* `2`
+
+**`subjid`**
+
+: Regular expression to parse filename and get subject id. Creates subjid_derived variable
+
+  *Required:* No
+
+**`visit`**
+
+: Regular expression to parse filename and get visit. Creates visit_derived variable
+
+  *Required:* No
+
+**`outds`**
+
+: Name of the output dataset
+
+  *Required:* No
+
+  *Default:* `out`
+
+**`getnames`**
+
+: Getnames option in import procedure
+
+  *Required:* No
+
+  *Default:* `YES`
+
+**`compress_names`**
+
+: Option to remove spaces from variable names
+
+  *Required:* No
+
+  *Default:* `Y`
+
+**`debug`**
+
+: Option to clean up intermediate datasets after macro execution
+
+  *Required:* No
+
+  *Default:* `N`
+
+## Examples
+
+```sas
+%xuloadcsv(filename=%str(Clamp),subjid=%str(101-\d{3}),visit=%str(D\d+));
+%xuloadcsv(filename=%str(^(?!.*(Dummy|PC|PK)).*csv$));
+```
+

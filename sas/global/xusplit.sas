@@ -1,32 +1,27 @@
-/************************************************************************************
-* Program/Macro:             xusplit.sas
-* Protocol:                  
-* SAS Ver:                   SAS 9.4 V9
-* Author:                    Atorus Research
-* Date:                      15JUL2022
-* Program Title:             
+/**
+* @file xusplit.sas
+* @brief Split long text variable into multiple shorter sub-variables
 *
-* Description:               Macro which splits long text variable into multiple shorter sub-variables.
-* Remarks:
-* Input:                     &inds input dataset
-* Output:                    &outds with &prefix.-&prefix.X variables
+* @author Atorus Research
+* @date 15JUL2022
 *
-* Parameters:                inds - name of the input dataset.
-*							 invar - name of the input variable to split.
-*							 outds - name of the output dataset.
-*							 prefix - prefix for the output variables names.
-*							 len - length of the output variables.
-*							 debug - flag, that determines whether to delete temporary datasets or not.
-*                            
-* Sample Call:               %xusplit(cm, cmdecod);
-*							 %xusplit(dv1, temn, outds=dv, prefix=dvterm)
+* @param[in] inds Name of the input dataset (Required)
+* @param[in] invar Name of the input variable to split (Required)
+* @param[in] outds Name of the output dataset (Default: &inds)
+* @param[in] prefix Prefix for the output variables names (Default: &invar)
+* @param[in] len Length of the output variables (Default: 200)
+* @param[in] debug Flag that determines whether to delete temporary datasets or not (Default: N)
 *
-* Assumptions:               
-* Revisions:                
-* Revision #	Programmer 	                   Date 	     	   Description of Change(s)
-* ----------    ----------------------         ------------        ---------------------------
-* 
-************************************************************************************/
+* @return &outds with &prefix.-&prefix.X variables
+*
+* @par Example:
+* @code
+* %xusplit(cm, cmdecod);
+* %xusplit(dv1, temn, outds=dv, prefix=dvterm);
+* @endcode
+*
+* @see N/A
+*/
 
 %macro xusplit(inds /*Required. Name of the input dataset.*/,
 			   invar /*Required. Name of the input variable to split.*/,

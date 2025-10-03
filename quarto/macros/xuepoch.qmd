@@ -1,0 +1,44 @@
+---
+title: "xuepoch"
+---
+
+## Description
+
+Derive EPOCH variable using SE SDTM dataset.
+
+## Parameters
+
+**`inds`**
+
+: Name of the input dataset
+
+  *Required:* Yes
+
+**`dtcdate`**
+
+: Name of the date variable
+
+  *Required:* Yes
+
+**`outds`**
+
+: Name of the output dataset
+
+  *Required:* No
+
+  *Default:* `&inds`
+
+**`debug`**
+
+: Flag that determines whether to delete temporary datasets or not
+
+  *Required:* No
+
+  *Default:* `N`
+
+## Examples
+
+```sas
+%xuepoch(lb,lbdtc);
+```
+

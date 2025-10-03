@@ -1,0 +1,68 @@
+---
+title: "kplotrtf"
+---
+
+## Description
+
+Generate Figure RTF Output.
+
+Macro to generate an RTF file from a final statistical graphics procedure. The following macro variables must be defined before execution:
+
+## Parameters
+
+**`call`**
+
+: Macro call type: OPEN or CLOSE
+
+  *Required:* Yes
+
+**`inds`**
+
+: Input dataset name
+
+  *Required:* No
+
+  *Default:* `&_oid.`
+
+**`sortby`**
+
+: Variable for sorting the input dataset
+
+  *Required:* No
+
+  *Default:* `DATA for no sorting`
+
+**`MaxPageDigits`**
+
+: Number of digits in the last page indicator for 'Page X of Y'
+
+  *Required:* No
+
+  *Default:* `1`
+
+**`escapechar`**
+
+: ODS Escape Character to be used
+
+  *Required:* No
+
+  *Default:* `@`
+
+**`debug`**
+
+: Flag to save interim datasets for debugging purposes Y/N
+
+  *Required:* No
+
+  *Default:* `N`
+
+## Examples
+
+```sas
+%plotrtf(call=OPEN,MaxPageDigits=3);
+procsgplotdata=...
+...
+quit;
+%plotrtf(call=CLOSE);
+```
+

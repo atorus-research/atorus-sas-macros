@@ -1,29 +1,24 @@
-/************************************************************************************
-* Program/Macro:    		 xuepoch.sas
-* Protocol:         
-* SAS Ver:          		 SAS 9.4 V9
-* Author:           		 Atorus Research
-* Date:             		 20JUL2022
-* Program Title:    
+/**
+* @file xuepoch.sas
+* @brief Derive EPOCH variable using SE SDTM dataset
 *
-* Description:      		 Macro to derive EPOCH variable using SE SDTM dataset
-* Remarks:
-* Input:            		 SE dataset from SDTM library, &inds dataset
-* Output:           		 &outds dataset
+* @author Atorus Research
+* @date 20JUL2022
 *
-* Parameters:       		 inds - name of the input dataset.
-*							 dtcdate - name of the date variable.
-*							 outds - name of the output dataset.
-*							 debug - flag, that determines whether to delete temporary datasets or not.
-*                   
-* Sample Call:      		 %xuepoch(lb, lbdtc);
+* @param[in] inds Name of the input dataset (Required)
+* @param[in] dtcdate Name of the date variable (Required)
+* @param[in] outds Name of the output dataset (Default: &inds)
+* @param[in] debug Flag that determines whether to delete temporary datasets or not (Default: N)
 *
-* Assumptions:               
-* Revisions:                
-* Revision #	Programmer 	                   Date 	     	   Description of Change(s)
-* ----------    ----------------------         ------------        ---------------------------
+* @return &outds dataset with EPOCH variable derived
 *
-************************************************************************************/
+* @par Example:
+* @code
+* %xuepoch(lb, lbdtc);
+* @endcode
+*
+* @see N/A
+*/
 
 %macro xuepoch(inds /*Required. Name of the input dataset.*/, 
 			   dtcdate /*Required. Name of the date variable.*/,

@@ -1,0 +1,79 @@
+---
+title: "jdtflstyle"
+---
+
+## Description
+
+Style template macro for study PDF/RTF outputs.
+
+Opens ODS PDF/RTF destination and creates PDF/RTF file. Also creates global macro variables with timestamps. See article https://support.sas.com/resources/papers/proceedings/proceedings/forum2007/225-2007.pdf for more details on ODS style, markup and tagsets.
+
+## Parameters
+
+**`filename`**
+
+: Name of the output file
+
+  *Required:* Yes
+
+**`filepath`**
+
+: File save path
+
+  *Required:* No
+
+**`type`**
+
+: File extension: RTF/PDF
+
+  *Required:* No
+
+  *Default:* `RTF`
+
+**`lmarg`**
+
+: Left margin size
+
+  *Required:* No
+
+  *Default:* `1in`
+
+**`rmarg`**
+
+: Right margin size
+
+  *Required:* No
+
+  *Default:* `1in`
+
+**`tmarg`**
+
+: Top margin size
+
+  *Required:* No
+
+  *Default:* `1in`
+
+**`bmarg`**
+
+: Bottom margin size
+
+  *Required:* No
+
+  *Default:* `1in`
+
+**`escapechar`**
+
+: Escape character
+
+  *Required:* No
+
+  *Default:* `$`
+
+## Examples
+
+```sas
+%jdtflstyle(T_10_1_1);
+%jdtflstyle(F_15_1_2,bmarg=0.8in);
+```
+

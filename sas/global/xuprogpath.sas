@@ -1,28 +1,20 @@
-/************************************************************************************
-* Program/Macro:             xuprogpath.sas
-* Protocol:                  
-* SAS Ver:                   SAS 9.4 V9
-* Author:                    Atorus Research
-* Date:                      19FEB2021
-* Program Title:             
+/**
+* @file xuprogpath.sas
+* @brief Find full path to currently executing file and create task-related global variables
+* @details Assumes the file is a program being executed within Atorus standard programming environment.
 *
-* Description:               Find out full path to currently executing file. Create task-related
-*                            global variables, assuming the file is a program, being executed within
-*                            Atorus standard programming environment.
-* Remarks:                   This macro should be called automatically within %xumprint macro and setup.sas.
-* Input:                     N/A
-* Output:   				 N/A
-* 
-* Parameters:                N/A
-*                            
-* Sample Call:               %xuprogpath;
+* @author Atorus Research
+* @date 19FEB2021
 *
-* Assumptions:               
-* Revisions:                
-* Revision #	Programmer 	                   Date 	     	   Description of Change(s)
-* ----------    ----------------------         ------------        ---------------------------
+* @par Example:
+* @code
+* %xuprogpath;
+* @endcode
 *
-************************************************************************************/
+* @remarks This macro should be called automatically within %xumprint macro and setup.sas.
+*
+* @see xumprint
+*/
 
 %macro xuprogpath;
 

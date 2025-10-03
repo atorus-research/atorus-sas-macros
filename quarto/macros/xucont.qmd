@@ -1,0 +1,37 @@
+---
+title: "xucont"
+---
+
+## Description
+
+Executes contents procedure.
+
+## Parameters
+
+**`inds`**
+
+: Name(s) of the input dataset(s)
+
+  *Required:* Yes
+
+**`sourcelib`**
+
+: Name of the input library
+
+  *Required:* Yes
+
+**`contopts`**
+
+: Options for the contents procedure
+
+  *Required:* No
+
+  *Default:* `varnum`
+
+## Examples
+
+```sas
+%xucont(dmsuppdm,sdtm);
+%xucont(adsl,adam);
+```
+

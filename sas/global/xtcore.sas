@@ -1,30 +1,25 @@
-/************************************************************************************
-* Program/Macro:             xtcore.sas
-* Protocol:                  
-* SAS Ver:                   SAS 9.4 V9
-* Author:                    Atorus Research
-* Date:                      14JUL2022
-* Program Title:             
+/**
+* @file xtcore.sas
+* @brief Adds ADSL core variables to an analysis dataset
 *
-* Description:               Adds ADSL core variables to an analysis dataset.
-* Remarks:
-* Input:                     &inds parent dataset, metadata spreadsheet, ADSL dataset
-* Output:                    &inds with ADSL core variables added to the end of the dataset, global macro variable &core_vars
+* @author Atorus Research
+* @date 14JUL2022
 *
-* Parameters:                inds - name of the parent dataset.
-*							 outds - name of the output dataset.
-* 							 filename - indicates source file to use: SDTM_spec_Codelist.csv or ADaM_spec_Codelist.csv.
-* 							 filepath - indicates path to source file.
-*							 debug - flag, that determines whether to delete temporary datasets or not.
+* @param[in] inds Name of the parent dataset for adding ADSL core variables (Required)
+* @param[in] outds Name of the output dataset (Default: &inds)
+* @param[in] filename Source file to use: SDTM_spec_Codelist.csv or ADaM_spec_Codelist.csv (Optional)
+* @param[in] filepath Path to source file (Optional)
+* @param[in] debug Flag that determines whether to delete temporary datasets or not (Default: N)
 *
-* Sample Call:               %xtcore(adlb);
+* @return &inds with ADSL core variables added to the end of the dataset, global macro variable &core_vars
 *
-* Assumptions:               
-* Revisions:                
-* Revision #	Programmer 	                   Date 	     	   Description of Change(s)
-* ----------    ----------------------         ------------        ---------------------------
-* 
-************************************************************************************/
+* @par Example:
+* @code
+* %xtcore(adlb);
+* @endcode
+*
+* @see N/A
+*/
 
 %macro xtcore(inds /*Required. Name of the parent dataset for adding ADSL core variables.*/,
 			  outds=&inds. /*Default: &inds. Name of the output dataset.*/,

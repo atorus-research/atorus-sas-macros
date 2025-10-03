@@ -1,31 +1,26 @@
-/************************************************************************************
-* Program/Macro:             xumrgcs.sas
-* Protocol:                  
-* SAS Ver:                   SAS 9.4 V9
-* Author:                    Atorus Research
-* Date:                      22AUG2022
-* Program Title:             
+/**
+* @file xumrgcs.sas
+* @brief Merge SUPP-- and CO to the input SDTM dataset
 *
-* Description:               Macro which merges SUPP-- and CO to the input SDTM dataset
-* Remarks:
-* Input:                     &inds input dataset(s) from &sourcelib library
-* Output:                    &inds_supp_co dataset(s)
+* @author Atorus Research
+* @date 22AUG2022
 *
-* Parameters:                inds - name(s) of the input dataset(s).
-*							 sourcelib - name of the input library.
-*							 supp - flag, that determines whether to merge SUPP-- dataset or not.
-*							 co - flag, that determines whether to merge CO dataset or not.
-*							 debug - flag, that determines whether to delete temporary datasets or not.
-*                            
-* Sample Call:               %xumrgcs(dm ae, sdtm, supp=Y, co=N);
-*							 %xumrgcs(pr, sdtm, supp=Y, co=Y);
+* @param[in] inds Name(s) of the input dataset(s) (Required)
+* @param[in] sourcelib Name of the input library (Required)
+* @param[in] supp Flag that determines whether to merge SUPP-- dataset or not (Default: Y)
+* @param[in] co Flag that determines whether to merge CO dataset or not (Default: Y)
+* @param[in] debug Flag that determines whether to delete temporary datasets or not (Default: N)
 *
-* Assumptions:               
-* Revisions:                
-* Revision #	Programmer 	                   Date 	     	   Description of Change(s)
-* ----------    ----------------------         ------------        ---------------------------
-* 
-************************************************************************************/
+* @return &inds_supp_co dataset(s)
+*
+* @par Example:
+* @code
+* %xumrgcs(dm ae, sdtm, supp=Y, co=N);
+* %xumrgcs(pr, sdtm, supp=Y, co=Y);
+* @endcode
+*
+* @see N/A
+*/
 
 %macro xumrgcs(inds /*Required. Name(s) of the input dataset(s).*/,
 			   sourcelib /*Required. Name of the input library.*/,

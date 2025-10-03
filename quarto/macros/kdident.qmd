@@ -1,0 +1,61 @@
+---
+title: "kdident"
+---
+
+## Description
+
+Beautifully split character variables for output in table/listing.
+
+## Parameters
+
+**`invar`**
+
+: Name of the input variable
+
+  *Required:* Yes
+
+**`maxln`**
+
+: Maximum number of characters allowed per line
+
+  *Required:* Yes
+
+**`outvar`**
+
+: Name of the output variable
+
+  *Required:* No
+
+  *Default:* `&invar._new`
+
+**`tabchar`**
+
+: Tabulation characters, used to pad newlines
+
+  *Required:* No
+
+  *Default:* `str($ $ $`
+
+**`newlchar`**
+
+: Newline character
+
+  *Required:* No
+
+  *Default:* `str($n`
+
+**`debug`**
+
+: Flag that determines whether to delete temporary variables or not
+
+  *Required:* No
+
+  *Default:* `N`
+
+## Examples
+
+```sas
+%kdident(aebodsys,17);
+%kdident(lbcomm1,32,outvar=col10,tabchar=%str());
+```
+

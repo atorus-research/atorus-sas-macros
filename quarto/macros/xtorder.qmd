@@ -1,0 +1,43 @@
+---
+title: "xtorder"
+---
+
+## Description
+
+Creates a global macro variable called &dsname.SORTSTRING.
+
+## Parameters
+
+**`dsname`**
+
+: Dataset to look for in the metadata file
+
+  *Required:* Yes
+
+**`filename`**
+
+: Name of the CSV file with metadata. Determined automatically if empty
+
+  *Required:* No
+
+**`filepath`**
+
+: Full path to CSV file with metadata
+
+  *Required:* No
+
+**`debug`**
+
+: Flag that determines whether to delete temporary datasets or not
+
+  *Required:* No
+
+  *Default:* `N`
+
+## Examples
+
+```sas
+%xtorder(ADSL);
+%xtorder(AE);
+```
+

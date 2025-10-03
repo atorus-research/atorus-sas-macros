@@ -1,28 +1,23 @@
-/************************************************************************************
-* Program/Macro:             xcdtcdy.sas
-* Protocol:
-* SAS Ver:                   SAS 9.4 V9
-* Author:					 Atorus Research
-* Date:						 19FEB2021
-* Program Title:             
+/**
+* @file xcdtcdy.sas
+* @brief Take two SDTM character --DTC dates and calculate SDTM --DY variable
 *
-* Description:               Take two SDTM character --DTC dates and calculate SDTM --DY variable.
-* Remarks:
-* Input:					 &dtcdate and &refdate character date variables
-* Output:					 --DY numeric variable
+* @author Atorus Research
+* @date 19FEB2021
 *
-* Parameters:                dtcdate - date to calculate --DY for.
-*                            refdate - reference character date.
+* @param[in] dtcdate Date to calculate --DY for (Required)
+* @param[in] refdate Reference character date (Required)
 *
-* Sample Call:				 %xcdtcdy(exstdtc, rfstdtc);
-*							 %xcdtcdy(lbdtc, rfstdtc);
+* @return --DY numeric variable
 *
-* Assumptions:
-* Revisions:
-* Revision #    Programmer                     Date                Description of Change(s)
-* ----------    ----------------------         ------------        ---------------------------
+* @par Example:
+* @code
+* %xcdtcdy(exstdtc, rfstdtc);
+* %xcdtcdy(lbdtc, rfstdtc);
+* @endcode
 *
-************************************************************************************/
+* @see N/A
+*/
 
 %macro xcdtcdy(dtcdate /*Required. Name of character --DTC variable to calculate --DY for.*/,
                refdate /*Required. Reference character date.*/);

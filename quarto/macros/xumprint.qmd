@@ -1,0 +1,27 @@
+---
+title: "xumprint"
+---
+
+## Description
+
+Save log and lst files and upload log file back to SAS session.
+
+Converts notes of interest into warnings. This macro is like DO-END and should be called at the start of the program with route=YES and at the end of the program with no parameters specified.
+
+## Parameters
+
+**`route`**
+
+: Specify YES to save lst and log files. Leave blank to read log back to SAS EG
+
+  *Required:* No
+
+  *Default:* `NO`
+
+## Examples
+
+```sas
+%xumprint(route=YES);
+%xumprint();
+```
+

@@ -1,0 +1,25 @@
+---
+title: "Atorus SAS Macros Documentation"
+---
+
+# Welcome
+
+This documentation provides comprehensive information about the SAS macros developed by Atorus Research for clinical trial data processing.
+
+## About
+
+These macros are designed to streamline common tasks in clinical trial data management, including:
+
+- Data transformation and manipulation
+- SDTM and ADaM dataset creation
+- Quality control and validation
+- Report generation
+
+## Organization
+
+The macros are organized into two categories:
+
+- **Global Macros**: Reusable utilities applicable across multiple studies
+- **Study-Specific Macros**: Specialized tools for specific study requirements
+
+Use the navigation menu to browse individual macro documentation.

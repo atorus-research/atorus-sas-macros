@@ -1,29 +1,24 @@
-/************************************************************************************
-* Program/Macro:             xuvisit.sas
-* Protocol:                  
-* SAS Ver:                   SAS 9.4 V9
-* Author:                    Atorus Research
-* Date:                      19JUL2022
-* Program Title:             
+/**
+* @file xuvisit.sas
+* @brief Derive VISIT/VISITNUM variables using TV and SV domains
 *
-* Description:               Macro which derives VISIT/VISITNUM variables using TV and SV domains.
-* Remarks:
-* Input:                     SV and TV datasets from SDTM library, &inds dataset
-* Output:                    &outds dataset
+* @author Atorus Research
+* @date 19JUL2022
 *
-* Parameters:                inds - name of the input dataset.
-*							 dtcdate - name of the date variable.
-*							 outds - name of the output dataset.
-*							 debug - flag, that determines whether to delete temporary datasets or not.
-*                            
-* Sample Call:               %xuvisit(vs,vsdtc);
+* @param[in] inds Name of the input dataset (Required)
+* @param[in] dtcdate Name of the date variable (Required)
+* @param[in] outds Name of the output dataset (Default: &inds)
+* @param[in] debug Flag that determines whether to delete temporary datasets or not (Default: N)
 *
-* Assumptions:               
-* Revisions:                
-* Revision #	Programmer 	                   Date 	     	   Description of Change(s)
-* ----------    ----------------------         ------------        ---------------------------
+* @return &outds dataset with VISIT/VISITNUM variables
 *
-************************************************************************************/
+* @par Example:
+* @code
+* %xuvisit(vs,vsdtc);
+* @endcode
+*
+* @see N/A
+*/
 
 %macro xuvisit(inds /*Required. Name of the input dataset.*/,
 			   dtcdate /*Required. Name of the date variable.*/,

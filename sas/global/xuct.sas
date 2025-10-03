@@ -1,43 +1,36 @@
-/************************************************************************************
-* Program/Macro:             xuct.sas
-* Protocol:                  
-* SAS Ver:                   SAS 9.4 V9
-* Author:                    Atorus Research
-* Date:                      12AUG2022
-* Program Title:             
+/**
+* @file xuct.sas
+* @brief Check if variable values match Codelists tab of spec and CDISC SDTM Controlled Terminology
 *
-* Description:               A program to check if variable has only the values specified in Codelists tab of spec and checks for 
-* 							 compliance with CDISC SDTM Controlled terminology.
-* Remarks:
-* Input:                     &inds input dataset, _ct.sas7bdat SDTM Controlled Terminology dataset in the misc library
-* Output:                    list of values that do not match SDTM Controlled Terminology, list of values that are not 
-*							 in Codelists tab in spec, _ct.sas7bdat (if it's not already created)
+* @author Atorus Research
+* @date 12AUG2022
 *
-* Parameters:                inds - name of the input dataset.
-*							 invar - name of the variable in input dataset to be checked.
-*							 codelist - codelist name as specified in ID column in codelists metadata file.
-* 							 subset - logical condition to be used in where clause, when variable may have multiple codelists.
-*							 filename - codelists metadata file (Codelists tab of spec converted to .csv file).
-*							 filepath - path to codelists metadata file.
-*							 ctfile - CDISC SDTM Controlled Terminology file converted to CSV.
-*							 ctpath - path to path to CDISC SDTM Controlled Terminology file, if misc._ct.sas7bdat is missing.
-*							 checkct - flag, that determines whether values should be checked for sompliance with CDISC SDTM CT.
-*							 debug - flag, that determines whether to delete temporary datasets or not.
-*                            
-* Sample Call:               %xuct(cm, CMCAT, CMCAT, checkct = N);
-* 							 %xuct(ex, EXDOSU, EX.UNIT, checkct = Y);
-* 							 %xuct(lb, LBORRESU, LB.UNIT, checkct = Y);
+* @param[in] inds Name of the input dataset (Required)
+* @param[in] invar Name of the variable in input dataset to be checked (Required)
+* @param[in] codelist Codelist name as specified in ID column in codelists metadata file (Required)
+* @param[in] subset Logical condition to be used in where clause, when variable may have multiple codelists (Optional)
+* @param[in] filename Codelists metadata file (Codelists tab of spec converted to .csv file) (Optional)
+* @param[in] filepath Path to codelists metadata file (Optional)
+* @param[in] ctfile CDISC SDTM Controlled Terminology file converted to CSV (Optional)
+* @param[in] ctpath Path to CDISC SDTM Controlled Terminology file, if misc._ct.sas7bdat is missing (Optional)
+* @param[in] checkct Flag that determines whether values should be checked for compliance with CDISC SDTM CT (Default: Y)
+* @param[in] debug Flag that determines whether to delete temporary datasets or not (Default: N)
 *
-* Assumptions:				 If codelist is applicable for multiple domains, such as UNIT applicable for EX/LB/CM/etc., then
-*							 codelist ID in spec must be in DOMAIN.CODELIST format, i.e. EX.UNIT, LB.UNIT, CM.UNIT.
-* 							 _ct.sas7bdat should be available in the misc library. If _ct.sas7bdat is not there, then CDISC 
-* 							 SDTM Controlled Terminology spreadsheet with .csv extension (ctfile parameter) must be available in 
-* 							 directory specified in ctpath parameter. Delimeter must be "$".
-* Revisions:                
-* Revision #	Programmer 	                   Date 	     	   Description of Change(s)
-* ----------    ----------------------         ------------        ---------------------------
+* @return List of values that do not match SDTM Controlled Terminology, list of values not in Codelists tab, _ct.sas7bdat (if not already created)
 *
-************************************************************************************/
+* @par Example:
+* @code
+* %xuct(cm, CMCAT, CMCAT, checkct = N);
+* %xuct(ex, EXDOSU, EX.UNIT, checkct = Y);
+* %xuct(lb, LBORRESU, LB.UNIT, checkct = Y);
+* @endcode
+*
+* @remarks If codelist is applicable for multiple domains, codelist ID in spec must be in DOMAIN.CODELIST format (e.g., EX.UNIT, LB.UNIT).
+*          _ct.sas7bdat should be available in the misc library. If not, CDISC SDTM CT spreadsheet with .csv extension must be available.
+*          Delimiter must be "$".
+*
+* @see N/A
+*/
 
 %macro xuct(inds /*Required. Input dataset name.*/,
 			invar /*Required. Variable name that will be checked for CT.*/,

@@ -1,33 +1,31 @@
-/************************************************************************************
-* Program/Macro:             kqtlfcomp.sas
-* Protocol:                  
-* SAS Ver:                   SAS 9.4 V9
-* Author:                    Atorus Research
-* Date:                      09SEP2021
-* Program Title:             
+/**
+* @file kqtlfcomp.sas
+* @brief Compare TLF datasets
 *
-* Description:               Macro which compares TLF datasets
-* Remarks:
-* Input:                     &output dataset from &prod_lib and &qc_lib
-* Output:                    find_&output dataset
+* @author Atorus Research
+* @date 09SEP2021
 *
-* Parameters:                output - output name. The macro will look for that dataset name in the prod_lib. For the qc lib, it will look for the index of that dataset name.
-*                            prod_lib - library of the production output dataset.
-*                            qc_lib - library of the qc output dataset.
-*                            qc_output - specify when you want to manually select your dataset, can be left empty if you assumed the same name as the production.
-*                            where - allows the user to specify a where statement to facilitate investitations e.g. where=%str(lbcat="HEMATOLOGY").
-*                            prod_drop - specifies which variables have to be dropped from the production. Not advisable to use.
-*                            dropchecked - specifies whether qcer dropped and checked any variables from production dataset before comparing.
-*                            ignspl - Y/N. If Y then the comparison changes every split character to a space.
-*                            chrspl - specifies the split character (e.g. chrspl=|).
-*                            ignspc - Y/N. If Y then the comparison strips and compbl the results before comparing. Thereby ignoring any alignment differences between production and qc.
-*                            ignlbl - Y/N. If Y then the comparison removes the variable labels before comparing.
-*                            ignln - Y/N. If Y then ignores variable lengths while comparing.
-*                            ignfor - Y/N. If Y then the comparison removes the variable formats before comparing.
-*                            ignifor - Y/N. If Y then the comparison removes the variable informats before comparing.
-*                            compress - Y/N. If Y then the comparison removes all spaces before comparing. Defaulted to N because removing all spaces can lead to numerical reading issues;
-* 							 crit - specifies the criterion for the compare procedure.
-*                            debug - Y/N. Can be switched to Y when the macro produces errors, to allow debugging.
+* @param[in] output Output name. The macro will look for that dataset name in prod_lib (Required)
+* @param[in] prod_lib Library of the production output dataset (Required)
+* @param[in] qc_lib Library of the qc output dataset (Required)
+* @param[in] qc_output Manually specify dataset name, can be left empty if same as production (Optional)
+* @param[in] where Where statement to facilitate investigations, e.g., where=%str(lbcat="HEMATOLOGY") (Optional)
+* @param[in] prod_drop Variables to be dropped from production. Not advisable to use (Optional)
+* @param[in] dropchecked Whether qcer dropped and checked any variables from production dataset before comparing (Optional)
+* @param[in] ignspl If Y, comparison changes every split character to a space (Default: N)
+* @param[in] chrspl Split character, e.g., chrspl=| (Optional)
+* @param[in] ignspc If Y, comparison strips and compbl results before comparing, ignoring alignment differences (Default: N)
+* @param[in] ignlbl If Y, comparison removes variable labels before comparing (Default: N)
+* @param[in] ignln If Y, ignores variable lengths while comparing (Default: N)
+* @param[in] ignfor If Y, comparison removes variable formats before comparing (Default: N)
+* @param[in] ignifor If Y, comparison removes variable informats before comparing (Default: N)
+* @param[in] compress If Y, comparison removes all spaces before comparing (Default: N)
+* @param[in] crit Criterion for the compare procedure (Optional)
+* @param[in] debug If Y, allows debugging when macro produces errors (Default: N)
+*
+* @return find_&output dataset
+*
+* @see N/A
 *
 * Sample Call:               %kqtlfcomp(output=t_14_3_1_1,
 *							            prod_drop=rowlbl,

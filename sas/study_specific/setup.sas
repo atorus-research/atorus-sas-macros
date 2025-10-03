@@ -1,27 +1,16 @@
-/************************************************************************************
-* Program/Macro:             setup.sas
-* Protocol:                  
-* SAS Ver:                   SAS 9.4 V9
-* Author:                    Atorus Research
-* Date:                      18FEB2021
-* Program Title:             
+/**
+* @file setup.sas
+* @brief Setup global variables and create libraries
+* @details Setups global variables __root, __clnt_I, __comp, __prot, __subfolders_I,
+*          __task, __level, __side_I using %xuprogpath macro. Creates libraries.
 *
-* Description:               Setups global variables __root, __clnt_I, __comp, __prot, __subfolders_I,
-*							 __task, __level, __side_I using %xuprogpath macro. Creates libraries.
-* Remarks:                   This macro should be called automatically within %xumprint macro.
-* Input:                     N/A
-* Output:  					 N/A
-* 
-* Parameters:                N/A
-*                            
-* Sample Call:               N/A
+* @author Atorus Research
+* @date 18FEB2021
 *
-* Assumptions:               
-* Revisions:                
-* Revision #	Programmer 	                   Date 	     	   Description of Change(s)
-* ----------    ----------------------         ------------        ---------------------------
+* @remarks This macro should be called automatically within %xumprint macro.
 *
-************************************************************************************/
+* @see xuprogpath, xumprint
+*/
 
 %*Get program execution path and setup task/client related global macro variables.;
 %xuprogpath;
